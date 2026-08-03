@@ -2629,8 +2629,10 @@ setTimeout(() => {
 }, 2500);
 
 /* ── init ── */
-document.getElementById('fx').textContent  = 'Bs ' + FX.toFixed(2).replace('.',',');
-document.getElementById('wfx').textContent = 'Bs ' + FX.toFixed(2).replace('.',',');
+const fxEl = document.getElementById('fx');
+if(fxEl) fxEl.textContent = 'Bs ' + FX.toFixed(2).replace('.',',');
+const wfxEl = document.getElementById('wfx');
+if(wfxEl) wfxEl.textContent = 'Bs ' + FX.toFixed(2).replace('.',',');
 renderMenu(); renderBag(); startSlideLoop(); initBannerTouch(); initVideoCarouselManager(); initScrollRevealAndCounters(); go('menu');
 </script>
 </body>
