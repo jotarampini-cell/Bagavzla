@@ -397,9 +397,9 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
 /* ══════════ NAVBAR ══════════ */
 .navbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;
   justify-content:space-between;padding:12px 18px;
-  background:rgba(245,245,247,.78);backdrop-filter:blur(28px) saturate(180%);
+  background:rgba(18,21,25,.85);backdrop-filter:blur(28px) saturate(180%);
   -webkit-backdrop-filter:blur(28px) saturate(180%);
-  border-bottom:1px solid rgba(0,0,0,.06)}
+  border-bottom:1px solid var(--border)}
 .navbar .brand{font-size:20px;font-weight:800;letter-spacing:-.04em}
 .navbar .nb-r{display:flex;align-items:center;gap:10px}
 .fxpill{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600;
@@ -420,7 +420,7 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
 .store-status-bar {
   display: flex; align-items: center; justify-content: center; gap: 14px;
   padding: 7px 16px; font-size: 11px; font-weight: 600; color: var(--ink-2);
-  background: rgba(0,0,0,0.02); border-bottom: 1px solid var(--hair);
+  background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border);
 }
 .store-status-bar span { display: flex; align-items: center; gap: 4px; }
 .store-status-bar svg { width: 13px; height: 13px; stroke-width: 1.8; }
@@ -469,10 +469,10 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
   transition: all .25s cubic-bezier(.2,.8,.2,1); box-shadow: var(--shadow-s); position: relative; overflow: hidden;
 }
 .cat-card:hover, .cat-card:active { transform: translateY(-2px); box-shadow: var(--shadow-m); }
-.cat-card.on { border-color: var(--ink); background: #ffffff; box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+.cat-card.on { border-color: var(--primary); background: var(--fill); box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
 .cat-card.on::after {
   content: ""; position: absolute; bottom: 0; left: 30%; right: 30%; height: 3px;
-  background: var(--ink); border-radius: 99px 99px 0 0;
+  background: var(--primary); border-radius: 99px 99px 0 0;
 }
 .cat-icon-box {
   width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
@@ -594,8 +594,8 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
 .btn .amt{font-weight:700}
 
 .topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;
-  padding:12px 16px;background:rgba(245,245,247,.78);backdrop-filter:blur(28px) saturate(180%);
-  -webkit-backdrop-filter:blur(28px) saturate(180%);border-bottom:1px solid rgba(0,0,0,.06)}
+  padding:12px 16px;background:rgba(18,21,25,.85);backdrop-filter:blur(28px) saturate(180%);
+  -webkit-backdrop-filter:blur(28px) saturate(180%);border-bottom:1px solid var(--border)}
 .back{width:36px;height:36px;border-radius:50%;background:var(--fill);
   display:grid;place-items:center;cursor:pointer;flex-shrink:0}
 .back svg{width:17px;height:17px;color:var(--ink);stroke-width:2.2}
@@ -884,7 +884,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
     <div id="s-welcome">
       <div class="welcome-hero">
         <div class="welcome-bg">
-          <video src="https://assets.mixkit.co/videos/preview/mixkit-grilling-meat-on-a-barbecue-43176-large.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <video src="Videos/Video 1.mp4" autoplay loop muted playsinline preload="auto"></video>
         </div>
         <div class="top-navbar">
           <div class="logo">ALL GRILL</div>
