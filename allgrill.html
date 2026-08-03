@@ -8,34 +8,35 @@
 <title>All Grill</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 /* ─── tokens ─── */
 :root{
-  --primary:#2563eb;
-  --primary-light:#eff6ff;
+  --primary:#c19b77;
+  --primary-light:rgba(193, 155, 119, 0.1);
   --primary-fg:#ffffff;
-  --accent:#1abcfe;
-  --bg:#F5F5F7; --surface:#FFFFFF;
-  --ink:#1D1D1F; --ink-2:#6E6E73; --ink-3:#8E8E93; --ink-4:#AEAEB2;
-  --hair:rgba(0,0,0,.08); --fill:#EFEFF4; --fill-2:#E5E5EA;
+  --accent:#d4af37;
+  --bg:#121519; --surface:#181b21;
+  --ink:#ffffff; --ink-2:#a3a3a3; --ink-3:#737373; --ink-4:#525252;
+  --hair:rgba(255,255,255,.06); --fill:#1f2229; --fill-2:#2a2e37;
   --green:#34C759; --wa:#25D366;
-  --card:#ffffff;
-  --border:#e8eaed;
-  --muted:#f3f4f6;
-  --muted-fg:#6b7280;
-  --fg:#111827;
+  --card:#181b21;
+  --border:rgba(255,255,255,0.08);
+  --muted:#1f2229;
+  --muted-fg:#9ca3af;
+  --fg:#ffffff;
   --success:#16a34a;
   --success-light:#f0fdf4;
   --destructive:#dc2626;
-  --shadow-s:0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.03);
-  --shadow-m:0 4px 16px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.05);
-  --shadow-l:0 12px 40px rgba(0,0,0,.12),0 2px 8px rgba(0,0,0,.06);
+  --shadow-s:0 1px 3px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-m:0 4px 16px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.4);
+  --shadow-l:0 12px 40px rgba(0,0,0,.7),0 2px 8px rgba(0,0,0,.5);
   --font:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
-  --r:20px; --safe-b:env(safe-area-inset-bottom,0px);
+  --font-serif:'Playfair Display', serif;
+  --r:2px; --safe-b:env(safe-area-inset-bottom,0px);
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html,body{height:100%;overflow:hidden;background:#0a0503}
+html,body{height:100%;overflow:hidden;background:var(--bg)}
 body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
 
 /* ─── app shell ─── */
@@ -81,58 +82,50 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
 
 .top-navbar {
   position: absolute; top: 0; left: 0; right: 0; display: flex;
-  justify-content: space-between; align-items: center; padding: 20px 22px; z-index: 10;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, transparent 100%);
+  justify-content: space-between; align-items: center; padding: 24px; z-index: 10;
+  background: linear-gradient(to bottom, rgba(18,21,25,0.8) 0%, transparent 100%);
 }
-.top-navbar .logo { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
-.nav-actions { display: flex; gap: 10px; }
+.top-navbar .logo { font-family: var(--font-serif); font-size: 26px; font-weight: 700; color: var(--primary); letter-spacing: 0.02em; font-style: italic; }
+.nav-actions { display: flex; gap: 16px; align-items: center; }
 .nav-btn-order, .nav-btn-reserve {
-  padding: 8px 16px; border-radius: 99px; font-weight: 700; font-size: 13px; cursor: pointer; border: none;
-  font-family: var(--font); transition: transform 0.2s;
+  padding: 8px 18px; border-radius: var(--r); font-weight: 500; font-size: 13px; cursor: pointer; border: 1px solid transparent;
+  font-family: var(--font); transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.1em;
 }
-.nav-btn-order:active, .nav-btn-reserve:active { transform: scale(0.95); }
-.nav-btn-order { background: #dc2626; color: #fff; box-shadow: 0 4px 12px rgba(220,38,38,0.4); }
-.nav-btn-reserve { background: rgba(255,255,255,0.15); color: #fff; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3); }
+.nav-btn-order:active, .nav-btn-reserve:active { transform: scale(0.98); }
+.nav-btn-order { background: var(--primary); color: #111; }
+.nav-btn-reserve { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+.nav-btn-reserve:hover { border-color: var(--primary); color: var(--primary); }
 
-.welcome-body { position: relative; z-index: 3; padding: 0 22px; margin-top: auto; }
-.welcome-body .eyebrow { font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: rgba(255,255,255,.7); font-weight: 700; margin-bottom: 8px; }
-.welcome-body h1 { font-size: clamp(48px,13vw,68px); line-height: .93; letter-spacing: -.05em; font-weight: 800; color: #fff; }
-.welcome-body .tagline { font-size: 16px; color: rgba(255,255,255,.85); line-height: 1.45; margin-top: 12px; max-width: 320px; }
+.welcome-body { position: relative; z-index: 3; padding: 0 24px; margin-top: auto; }
+.welcome-body .eyebrow { font-family: var(--font); font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--primary); font-weight: 500; margin-bottom: 12px; }
+.welcome-body h1 { font-family: var(--font-serif); font-size: clamp(52px, 14vw, 80px); line-height: 0.95; letter-spacing: -0.02em; font-weight: 600; color: #fff; font-style: italic; }
+.welcome-body .tagline { font-family: var(--font); font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.6; margin-top: 16px; max-width: 320px; font-weight: 300; }
 
-/* Apple Liquid Glassmorphism Hero Buttons */
-.w-cta-group { margin-top: 22px; display: flex; flex-direction: column; gap: 12px; }
+/* Elegant Dishszo Buttons */
+.w-cta-group { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
 
 .w-cta-primary {
-  width: 100%; height: 58px; border-radius: 20px; cursor: pointer;
-  font-family: var(--font); font-weight: 700; font-size: 16px; letter-spacing: -.01em; color: #ffffff;
-  background: rgba(220, 38, 38, 0.42);
-  backdrop-filter: blur(32px) saturate(200%);
-  -webkit-backdrop-filter: blur(32px) saturate(200%);
-  border: 1px solid rgba(255, 150, 150, 0.48);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 12px 36px rgba(220, 38, 38, 0.4);
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  transition: transform .2s, background .2s, box-shadow .2s;
+  width: 100%; height: 54px; border-radius: var(--r); cursor: pointer;
+  font-family: var(--font); font-weight: 500; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #111; background: var(--primary);
+  border: 1px solid var(--primary);
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  transition: all 0.3s ease;
 }
 .w-cta-primary:hover, .w-cta-primary:active {
-  transform: scale(.98);
-  background: rgba(220, 38, 38, 0.55);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 16px 40px rgba(220, 38, 38, 0.5);
+  background: transparent; color: var(--primary);
 }
 
 .w-cta-secondary {
-  width: 100%; height: 56px; border-radius: 20px; cursor: pointer;
-  font-family: var(--font); font-weight: 700; font-size: 15px; letter-spacing: -.01em; color: #ffffff;
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(32px) saturate(190%);
-  -webkit-backdrop-filter: blur(32px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 10px 30px rgba(0, 0, 0, 0.28);
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  transition: transform .2s, background .2s, box-shadow .2s;
+  width: 100%; height: 54px; border-radius: var(--r); cursor: pointer;
+  font-family: var(--font); font-weight: 500; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #ffffff; background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  transition: all 0.3s ease;
 }
 .w-cta-secondary:hover, .w-cta-secondary:active {
-  transform: scale(.98);
-  background: rgba(255, 255, 255, 0.22);
+  border-color: var(--primary); color: var(--primary);
 }
 
 /* Indicador de scroll */
@@ -540,40 +533,38 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
 
 /* ══════════ BAG FLOTANTE ══════════ */
 .bag{position:absolute;left:14px;right:14px;bottom:calc(14px + var(--safe-b));z-index:80;
-  border-radius:18px;padding:12px 15px;
-  display:flex;align-items:center;justify-content:space-between;cursor:pointer;color:#fff;
-  background:rgba(20,10,5,.94);backdrop-filter:blur(30px) saturate(180%);
-  -webkit-backdrop-filter:blur(30px) saturate(180%);
-  border:1.5px solid rgba(255,255,255,.28);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 16px 40px rgba(0,0,0,.5);
+  border-radius:var(--r);padding:14px 18px;
+  display:flex;align-items:center;justify-content:space-between;cursor:pointer;color:#111;
+  background:var(--primary);
+  border:1px solid var(--accent);
+  box-shadow:0 8px 30px rgba(193, 155, 119, 0.3);
   transform:translateY(180%);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
 .bag.show{display:flex !important;transform:translateY(0) !important}
 .bag .l{display:flex;align-items:center;gap:11px}
-.bag .cnt{background:#fff;color:var(--ink);min-width:24px;height:24px;padding:0 6px;
-  border-radius:8px;font-size:13px;font-weight:700;display:grid;place-items:center}
+.bag .cnt{background:#111;color:var(--primary);min-width:24px;height:24px;padding:0 6px;
+  border-radius:2px;font-size:13px;font-weight:700;display:grid;place-items:center}
 .bag .lab{font-weight:600;font-size:14px}
 .bag .r{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px}
 .bag .r svg{width:14px;height:14px;stroke-width:2.4}
 
 /* ══════════ OVERLAY + SHEET ══════════ */
-.overlay{position:absolute;inset:0;z-index:1000;background:rgba(0,0,0,.45);
+.overlay{position:absolute;inset:0;z-index:1000;background:rgba(0,0,0,.7);
   backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .3s}
 .overlay.show{opacity:1;pointer-events:auto}
 .sheet{position:absolute;left:0;right:0;bottom:0;z-index:1010;max-height:90%;
-  background:rgba(250,250,252,.96);backdrop-filter:blur(40px) saturate(180%);
-  -webkit-backdrop-filter:blur(40px) saturate(180%);
-  border-top:1px solid rgba(255,255,255,.7);border-radius:28px 28px 0 0;
-  box-shadow:0 -20px 60px rgba(0,0,0,.35);
+  background:var(--surface);
+  border-top:1px solid var(--border);border-radius:16px 16px 0 0;
+  box-shadow:0 -20px 60px rgba(0,0,0,.8);
   transform:translateY(100%);transition:transform .42s cubic-bezier(.2,.8,.2,1);
   display:flex;flex-direction:column}
 .sheet.show{transform:translateY(0) !important}
-.grab{width:38px;height:5px;border-radius:99px;background:var(--fill-2);margin:10px auto 0}
-.sheet-img{height:190px;margin:12px 14px 0;border-radius:20px;position:relative;
+.grab{width:38px;height:4px;border-radius:2px;background:var(--border);margin:12px auto 0}
+.sheet-img{height:190px;margin:16px 20px 0;border-radius:8px;position:relative;
   overflow:hidden;box-shadow:var(--shadow-m)}
-.sheet-body{padding:18px 20px 8px;overflow-y:auto}
+.sheet-body{padding:24px 20px 8px;overflow-y:auto}
 .sheet-body::-webkit-scrollbar{display:none}
-.sheet-body h3{font-size:24px;font-weight:700;letter-spacing:-.03em}
-.sheet-body .p{font-size:14px;color:var(--ink-2);line-height:1.55;margin-top:7px}
+.sheet-body h3{font-family:var(--font-serif);font-size:28px;font-weight:600;letter-spacing:-.01em;color:var(--primary);font-style:italic;margin-bottom:8px;}
+.sheet-body .p{font-size:14.5px;color:rgba(255,255,255,0.7);line-height:1.6;margin-top:0;font-weight:300;}
 .opt-h{font-size:11px;color:var(--ink-3);font-weight:600;letter-spacing:.06em;
   text-transform:uppercase;margin:22px 0 6px}
 .optcard{background:var(--surface);border-radius:14px;box-shadow:var(--shadow-s);
@@ -854,23 +845,24 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
 .mag-images { position: relative; height: 280px; border-radius: 20px; }
 .mag-img-main { width: 90%; height: 100%; object-fit: cover; display: block; border-radius: 20px; }
 .mag-img-sub { position: absolute; bottom: -15px; right: 0; width: 55%; height: 60%; border-radius: 16px; border: 4px solid #fff; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
-.mag-text h3 { font-size: 26px; font-weight: 800; color: #111; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 12px; }
-.mag-text p { font-size: 14px; color: #555; line-height: 1.5; margin-bottom: 16px; }
+.mag-text h3 { font-family: var(--font-serif); font-size: 32px; font-weight: 600; color: var(--primary); letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 16px; font-style: italic; }
+.mag-text p { font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 16px; font-weight: 300; }
+.mag-img-sub { position: absolute; bottom: -15px; right: 0; width: 55%; height: 60%; border-radius: 16px; border: 4px solid var(--bg); object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
 
-.specials-menu { background: #0a0503; color: #fff; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 20px; overflow: hidden; position: relative; margin: 16px 16px 0; }
-.specials-header { display: flex; flex-direction: column; gap: 4px; position: relative; z-index: 2; }
-.specials-header h3 { font-size: 24px; font-weight: 800; margin: 0; color: #fff; letter-spacing: -0.02em; }
-.specials-header span { font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.5); font-weight: 700; }
-.specials-content { display: flex; flex-direction: column; gap: 16px; position: relative; z-index: 2; }
-.specials-list { display: flex; flex-direction: column; gap: 8px; }
-.special-item { display: flex; align-items: center; justify-content: space-between; padding: 10px; border-radius: 14px; cursor: pointer; transition: background 0.3s; border: 1px solid rgba(255,255,255,0.04); }
-.special-item:hover, .special-item.active { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); }
-.special-item .si-info { display: flex; align-items: center; gap: 12px; }
-.special-item img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
-.special-item h4 { font-size: 14px; font-weight: 600; margin: 0; color: #fff; }
-.special-item p { font-size: 12px; color: rgba(255,255,255,0.5); margin: 2px 0 0; }
-.special-item .si-price { font-size: 14px; font-weight: 700; color: #fff; }
-.specials-preview { width: 100%; height: 200px; border-radius: 16px; overflow: hidden; position: relative; }
+.specials-menu { background: var(--surface); color: #fff; border-radius: 12px; padding: 32px 24px; display: flex; flex-direction: column; gap: 24px; overflow: hidden; position: relative; margin: 24px 16px 0; border: 1px solid var(--border); }
+.specials-header { display: flex; flex-direction: column; gap: 8px; position: relative; z-index: 2; text-align: center; margin-bottom: 8px; }
+.specials-header h3 { font-family: var(--font-serif); font-size: 32px; font-weight: 600; margin: 0; color: var(--primary); letter-spacing: -0.01em; font-style: italic; }
+.specials-header span { font-size: 11px; text-transform: uppercase; letter-spacing: 0.25em; color: rgba(255,255,255,0.5); font-weight: 500; }
+.specials-content { display: flex; flex-direction: column; gap: 24px; position: relative; z-index: 2; }
+.specials-list { display: flex; flex-direction: column; gap: 16px; }
+.special-item { display: flex; flex-direction: column; cursor: pointer; transition: opacity 0.3s; opacity: 0.6; padding-bottom: 12px; border-bottom: 1px dashed rgba(255,255,255,0.1); }
+.special-item:hover, .special-item.active { opacity: 1; border-bottom-color: rgba(193, 155, 119, 0.4); }
+.special-item .si-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4px; }
+.special-item h4 { font-family: var(--font-serif); font-size: 18px; font-weight: 600; margin: 0; color: #fff; letter-spacing: 0.02em; }
+.special-item .si-dots { flex-grow: 1; border-bottom: 1px dotted rgba(255,255,255,0.2); margin: 0 12px; position: relative; top: -6px; }
+.special-item .si-price { font-family: var(--font); font-size: 16px; font-weight: 500; color: var(--primary); }
+.special-item p { font-size: 13px; color: rgba(255,255,255,0.5); font-style: italic; font-weight: 300; margin: 0; }
+.specials-preview { width: 100%; height: 260px; border-radius: 8px; overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.05); }
 .specials-preview img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; }
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -934,19 +926,15 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
         <div class="ambient-glow-3"></div>
 
         <!-- Sección 1: Editorial Origen (Ristera Style) -->
-        <div class="w-card" style="background:#ffffff; color:#111;">
-          <span class="w-card-tag" style="background:rgba(0,0,0,0.06); color:#111; border:none;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            NUESTRA HISTORIA
-          </span>
+        <div class="w-card" style="background:var(--bg); color:var(--ink); border:none; padding: 32px 24px;">
           <div class="mag-history">
-            <div class="mag-text">
-              <h3>Creamos la mejor experiencia a la brasa.</h3>
-              <p>Selección rigurosa de los mejores cortes de res, cerdo y ave. Cocinados a fuego lento con el aroma inconfundible del carbón vegetal y leña. Una combinación perfecta de comida exquisita y un personal amable que te hará sentir como en casa.</p>
+            <div class="mag-text" style="text-align:center;">
+              <span style="font-size:11px; text-transform:uppercase; letter-spacing:0.25em; color:var(--primary); font-weight:500; display:block; margin-bottom:12px;">Nuestra Historia</span>
+              <h3>El arte de la brasa<br>y la buena mesa</h3>
+              <p>Selección rigurosa de los mejores cortes, asados a fuego lento con el aroma inconfundible del carbón vegetal y leña. Una experiencia gastronómica de altura.</p>
             </div>
-            <div class="mag-images">
-              <img src="Images/Home.jpg" alt="Ambiente" class="mag-img-main">
-              <img src="Images/Costillas BBQ.jpg" alt="Costillas" class="mag-img-sub">
+            <div class="mag-images" style="margin-top: 16px;">
+              <img src="Images/Home.jpg" alt="Ambiente" class="mag-img-main" style="width: 100%; border-radius: 8px;">
             </div>
           </div>
         </div>
@@ -954,7 +942,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
         <!-- Sección Especialidades (Dishszo Style) -->
         <div class="specials-menu">
           <div class="specials-header">
-            <span>Favoritos</span>
+            <span>Para Compartir</span>
             <h3>Nuestro Menú Especial</h3>
           </div>
           <div class="specials-content">
@@ -963,34 +951,28 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
             </div>
             <div class="specials-list">
               <div class="special-item active" onmouseover="document.getElementById('sp-preview').src='Images/Parrilla mixta.jpg'" onclick="this.parentNode.querySelectorAll('.special-item').forEach(e=>e.classList.remove('active')); this.classList.add('active');">
-                <div class="si-info">
-                  <img src="Images/Parrilla mixta.jpg" alt="Parrilla">
-                  <div>
-                    <h4>Parrilla Familiar</h4>
-                    <p>Res, cerdo, pollo y chorizos</p>
-                  </div>
+                <div class="si-top">
+                  <h4>Parrilla Familiar</h4>
+                  <div class="si-dots"></div>
+                  <div class="si-price">$45</div>
                 </div>
-                <div class="si-price">$45</div>
+                <p>Res, cerdo, pollo, chorizos y contornos</p>
               </div>
               <div class="special-item" onmouseover="document.getElementById('sp-preview').src='Images/Costillas BBQ.jpg'" onclick="this.parentNode.querySelectorAll('.special-item').forEach(e=>e.classList.remove('active')); this.classList.add('active');">
-                <div class="si-info">
-                  <img src="Images/Costillas BBQ.jpg" alt="Costillas">
-                  <div>
-                    <h4>Costillas BBQ</h4>
-                    <p>Glaseado especial de la casa</p>
-                  </div>
+                <div class="si-top">
+                  <h4>Costillas St. Louis</h4>
+                  <div class="si-dots"></div>
+                  <div class="si-price">$22</div>
                 </div>
-                <div class="si-price">$22</div>
+                <p>Glaseado de la casa con papas rústicas</p>
               </div>
               <div class="special-item" onmouseover="document.getElementById('sp-preview').src='Images/Home.jpg'" onclick="this.parentNode.querySelectorAll('.special-item').forEach(e=>e.classList.remove('active')); this.classList.add('active');">
-                <div class="si-info">
-                  <img src="Images/Home.jpg" alt="Parrilla Personal">
-                  <div>
-                    <h4>Parrilla Personal</h4>
-                    <p>Corte premium individual</p>
-                  </div>
+                <div class="si-top">
+                  <h4>Corte Premium</h4>
+                  <div class="si-dots"></div>
+                  <div class="si-price">$18</div>
                 </div>
-                <div class="si-price">$18</div>
+                <p>Bife de chorizo, ensalada y yuca frita</p>
               </div>
             </div>
           </div>
