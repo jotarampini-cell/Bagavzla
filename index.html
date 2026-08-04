@@ -40,7 +40,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg)}
 body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
 
 /* ─── app shell ─── */
-#app{position:fixed;inset:0;display:flex;flex-direction:column;max-width:480px;margin:0 auto;
+#app{position:fixed;inset:0;display:flex;flex-direction:column;width:100%;margin:0 auto;
   background:var(--bg);overflow:hidden;
   box-shadow:0 0 80px rgba(0,0,0,.5)}
 
@@ -861,6 +861,66 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
 .specials-preview img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; }
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Desktop Responsive Adjustments */
+@media (min-width: 768px) {
+  #app { max-width: 1200px; margin: 0 auto; border-left: 1px solid rgba(255,255,255,0.05); border-right: 1px solid rgba(255,255,255,0.05); }
+  
+  .w-landing-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 60px 40px 100px;
+  }
+  
+  #wLanding > * { grid-column: span 1; }
+  
+  #wLanding > .ambient-glow-1,
+  #wLanding > .ambient-glow-2,
+  #wLanding > .ambient-glow-3,
+  #wLanding > .w-cta-primary,
+  #wLanding > .specials-menu {
+    grid-column: 1 / -1;
+  }
+  
+  #wLanding > .w-cta-primary { justify-self: center; min-width: 400px; }
+  
+  #wLanding > .w-card:has(.video-carousel-wrap),
+  #wLanding > .w-card:has(.team-scroll),
+  #wLanding > .w-card:has(.w-dish-scroll),
+  #wLanding > .w-card:has(.w-store-card) {
+    grid-column: 1 / -1;
+  }
+
+  .video-carousel-wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; overflow: hidden; padding: 0; }
+  .video-carousel-wrap .video-card-item { width: 100%; height: 500px; scroll-snap-align: none; flex: none; }
+  
+  .team-scroll { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; overflow: hidden; padding: 0; }
+  .team-item { min-width: 0; width: 100%; flex: none; }
+
+  .w-dish-scroll { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; overflow: hidden; padding: 0; }
+  .w-dish-item { min-width: 0; width: 100%; flex: none; }
+
+  #wLanding > .w-card:has(.w-store-card) { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  #wLanding > .w-card:has(.w-store-card) > span,
+  #wLanding > .w-card:has(.w-store-card) > h2,
+  #wLanding > .w-card:has(.w-store-card) > p { grid-column: 1 / -1; }
+
+  /* Menu Layout */
+  .list { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; padding: 24px 32px; }
+  .list .card { margin-bottom: 0; }
+  
+  .topbar { padding: 0 32px; }
+  .catScroll { padding: 16px 32px; justify-content: center; }
+
+  /* Bag and Modals */
+  .bag { max-width: 440px; margin: 0 auto; left: 0; right: 0; }
+  
+  #cartScroll > div:last-child { max-width: 600px; margin: 0 auto; width: 100%; padding: 32px; }
+  #coScroll > div.co-p { max-width: 600px; margin: 0 auto; width: 100%; padding: 32px; }
+}
+
+
 </style>
 </head>
 <body>
@@ -2640,3 +2700,4 @@ renderMenu(); renderBag(); startSlideLoop(); initBannerTouch(); initVideoCarouse
 </script>
 </body>
 </html>
+
