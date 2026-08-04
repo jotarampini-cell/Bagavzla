@@ -2179,6 +2179,7 @@ let appMode = 'delivery'; // 'dinein' | 'delivery'
 function enter(mode = 'delivery'){
   appMode = mode;
   document.getElementById('s-welcome').classList.add('hide');
+  setTimeout(() => { document.getElementById('s-welcome').style.display = 'none'; }, 600);
 
   const modeNotice = document.getElementById('modeNotice');
   if (mode === 'dinein') {
@@ -2195,6 +2196,8 @@ function enter(mode = 'delivery'){
 function goHome() {
   const w = document.getElementById('s-welcome');
   if (w) {
+    w.style.display = 'block';
+    void w.offsetWidth; // reflow
     w.classList.remove('hide');
     w.scrollTop = 0;
   }
