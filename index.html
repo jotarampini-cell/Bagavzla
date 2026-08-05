@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="description" content="All Grill — Carnes a la brasa. Pide en un minuto, paga como quieras.">
-<meta name="theme-color" content="#0a0503">
-<title>All Grill</title>
+<meta name="description" content="Baga — Nada se compara. Pide en un minuto, paga como quieras.">
+<meta name="theme-color" content="#0a0a0a">
+<title>Baga</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 /* ─── tokens ─── */
 :root{
-  --primary:#c19b77;
-  --primary-light:rgba(193, 155, 119, 0.1);
-  --primary-fg:#ffffff;
-  --accent:#d4af37;
-  --bg:#121519; --surface:#181b21;
+  --primary:#FFD407;
+  --primary-light:rgba(255, 212, 7, 0.1);
+  --primary-fg:#111111;
+  --accent:#FFD407;
+  --bg:#0a0a0a; --surface:#141414;
   --ink:#ffffff; --ink-2:#a3a3a3; --ink-3:#737373; --ink-4:#525252;
   --hair:rgba(255,255,255,.06); --fill:#1f2229; --fill-2:#2a2e37;
   --green:#34C759; --wa:#25D366;
@@ -62,7 +62,7 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
 #s-welcome {
   position: absolute; inset: 0; z-index: 150;
   overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth;
-  background: #0a0503; color: #fff; transition: opacity .6s, transform .6s;
+  background: #0a0a0a; color: #fff; transition: opacity .6s, transform .6s;
   -webkit-overflow-scrolling: touch;
 }
 #s-welcome::-webkit-scrollbar { width: 0; }
@@ -73,11 +73,11 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
   justify-content: flex-end; padding-bottom: 30px; box-sizing: border-box;
 }
 
-.welcome-bg { position: absolute; inset: 0; background: #0a0503; overflow: hidden; }
+.welcome-bg { position: absolute; inset: 0; background: #0a0a0a; overflow: hidden; }
 .welcome-bg video { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; display: block; }
 .welcome-bg::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,.3) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,.7) 70%, rgba(10,5,3,1) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,.3) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,.7) 70%, rgba(10,10,10,1) 100%);
 }
 
 .top-navbar {
@@ -85,7 +85,7 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
   justify-content: space-between; align-items: center; padding: 24px; z-index: 10;
   background: linear-gradient(to bottom, rgba(18,21,25,0.8) 0%, transparent 100%);
 }
-.top-navbar .logo { font-family: var(--font-serif); font-size: 26px; font-weight: 700; color: var(--primary); letter-spacing: 0.02em; font-style: italic; }
+.logo-img { height: 40px; width: auto; display: block; border-radius: 6px; }
 .nav-actions { display: flex; gap: 16px; align-items: center; }
 .nav-btn-order, .nav-btn-reserve {
   padding: 8px 18px; border-radius: var(--r); font-weight: 500; font-size: 13px; cursor: pointer; border: 1px solid transparent;
@@ -175,7 +175,7 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
 /* Landing Page Content abajo (Alto Contraste Sobrio App Store) */
 .w-landing-content {
   position: relative; z-index: 4; padding: 28px 20px 60px;
-  background: #0a0503; overflow: hidden;
+  background: #0a0a0a; overflow: hidden;
   display: flex; flex-direction: column; gap: 28px;
 }
 
@@ -195,21 +195,21 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
 
 /* Tarjeta Destacada de Alto Contraste Claro (App Store Today Highlight) */
 .w-card-light-accent {
-  background: rgba(255,255,255,0.95) !important; color: #0a0503 !important;
+  background: rgba(255,255,255,0.95) !important; color: #0a0a0a !important;
   border: 1px solid #ffffff !important; box-shadow: 0 20px 48px rgba(0,0,0,0.7) !important;
 }
 .w-card-light-accent .w-card-tag {
-  background: rgba(10,5,3,0.1) !important; color: #0a0503 !important;
-  border: 1px solid rgba(10,5,3,0.2) !important;
+  background: rgba(10,10,10,0.1) !important; color: #0a0a0a !important;
+  border: 1px solid rgba(10,10,10,0.2) !important;
 }
-.w-card-light-accent .w-card-tag svg { stroke: #0a0503 !important; }
-.w-card-light-accent h2 { color: #0a0503 !important; }
-.w-card-light-accent p { color: rgba(10,5,3,0.85) !important; }
+.w-card-light-accent .w-card-tag svg { stroke: #0a0a0a !important; }
+.w-card-light-accent h2 { color: #0a0a0a !important; }
+.w-card-light-accent p { color: rgba(10,10,10,0.85) !important; }
 .w-card-light-accent .ceo-quote-box {
-  background: rgba(10,5,3,0.06) !important; border-left: 3px solid #0a0503 !important;
+  background: rgba(10,10,10,0.06) !important; border-left: 3px solid #0a0a0a !important;
 }
-.w-card-light-accent .ceo-quote-box p { color: #0a0503 !important; }
-.w-card-light-accent .ceo-author { color: rgba(10,5,3,0.6) !important; }
+.w-card-light-accent .ceo-quote-box p { color: #0a0a0a !important; }
+.w-card-light-accent .ceo-author { color: rgba(10,10,10,0.6) !important; }
 
 /* ══ ANIMACIONES DE ENTRADA Y DINAMISMO ══ */
 .w-card.reveal-up {
@@ -401,6 +401,7 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
   -webkit-backdrop-filter:blur(28px) saturate(180%);
   border-bottom:1px solid var(--border)}
 .navbar .brand{font-size:20px;font-weight:800;letter-spacing:-.04em}
+.brand-img{height:30px;width:auto;display:block;border-radius:5px}
 .navbar .nb-r{display:flex;align-items:center;gap:10px}
 .fxpill{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600;
   color:var(--ink-2);background:var(--fill);padding:6px 11px;border-radius:999px}
@@ -494,13 +495,12 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='120' height='120' filter='url(%23n)' opacity='.5'/></svg>")}
 .img .gloss{position:absolute;inset:0;
   background:radial-gradient(70% 45% at 32% 8%,rgba(255,255,255,.35),transparent 60%)}
-.t-parrilla{background:linear-gradient(140deg,#4f2413,#8f3f1f 45%,#c26a2c 72%,#e69b45)}
-.t-pabellon{background:linear-gradient(140deg,#7a3f16,#bd7c2a 50%,#e8b657)}
-.t-costilla{background:linear-gradient(140deg,#5a2611,#963f1c 48%,#cf7331)}
-.t-cachapa{background:linear-gradient(140deg,#9a561b,#d69f3a 55%,#ffcb63)}
-.t-are{background:linear-gradient(140deg,#a15f20,#d8a044 52%,#f0cd77)}
-.t-que{background:linear-gradient(140deg,#7e5228,#c39a63 52%,#ecd6b6)}
-.t-pap{background:linear-gradient(140deg,#6f3712,#a86326 55%,#d99a52)}
+.t-entrada{background:linear-gradient(140deg,#1a1a1a,#3a3a3a 45%,#8a7a2c 72%,#FFD407)}
+.t-pasta{background:linear-gradient(140deg,#241c05,#5a4a12 50%,#c9a825 75%,#FFD407)}
+.t-burger{background:linear-gradient(140deg,#1a1206,#4a3410 48%,#a87e1c 74%,#FFD407)}
+.t-bebida{background:linear-gradient(140deg,#141414,#2e2e2e 50%,#6b5c1a 78%,#e8c433)}
+.t-coctel{background:linear-gradient(140deg,#180f00,#4d2e05 45%,#a86a15 72%,#FFD407)}
+.t-mocktail{background:linear-gradient(140deg,#0f1410,#2a3a1c 48%,#7a8f2c 74%,#c9e04a)}
 .pricepill{position:absolute;top:12px;left:12px;display:flex;align-items:baseline;gap:7px;
   background:rgba(18,21,25,.85);backdrop-filter:blur(20px) saturate(180%);
   -webkit-backdrop-filter:blur(20px) saturate(180%);
@@ -515,10 +515,13 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
   border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:8px}
 
 .addfab{position:absolute;bottom:12px;right:12px;width:38px;height:38px;
-  border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;
+  border-radius:50%;background:var(--primary);color:#111;display:grid;place-items:center;
   box-shadow:0 4px 14px rgba(0,0,0,.35);z-index:3;transition:transform .15s}
 .addfab:active{transform:scale(.9)}
 .addfab svg{width:18px;height:18px;stroke-width:2.2}
+body.dinein-mode .addfab{display:none}
+body.dinein-mode .sheet-foot{display:none}
+body.dinein-mode #shNoteWrap{display:none}
 
 .card .body{padding:18px 16px 16px}
 .card .body .eyebrow{font-size:10px;letter-spacing:.14em;text-transform:uppercase;
@@ -585,7 +588,7 @@ body{font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased
 /* ══════════ BOTONES Y COMPONENTES ══════════ */
 .btn{flex:1;height:54px;border:none;border-radius:14px;cursor:pointer;
   font-family:var(--font);font-weight:700;font-size:16px;letter-spacing:-.01em;
-  background:var(--primary);color:#fff;
+  background:var(--primary);color:#111;
   display:flex;align-items:center;justify-content:center;gap:10px;
   transition:transform .15s,opacity .15s}
 .btn:active{transform:scale(.97)}
@@ -695,7 +698,7 @@ select.input {
 
 .seg { display: flex; background: var(--muted); padding: 5px; border-radius: 11px; gap: 4px; margin-bottom: 20px; }
 .seg-btn { flex: 1; padding: 9px; font-size: 13px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all .2s; font-family: inherit; background: none; color: var(--muted-fg); }
-.seg-btn.active { background: var(--primary); color: white; box-shadow: var(--shadow-s); }
+.seg-btn.active { background: var(--primary); color: #111; box-shadow: var(--shadow-s); }
 
 .mode-icon { width: 38px; height: 38px; border-radius: 10px; background: var(--muted); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; transition: background .2s; }
 .card-interactive.selected .mode-icon { background: var(--primary); }
@@ -804,37 +807,6 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
   50%{transform:scale(.92)}75%{transform:scale(1.06)}}
 .bag.bounce{animation:bagBounce .45s ease}
 
-/* ══════════ PROMO MODAL ══════════ */
-.promo-modal-overlay {
-  position: absolute; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-  z-index: 1000; display: flex; align-items: center; justify-content: center;
-  opacity: 0; pointer-events: none; transition: opacity 0.4s ease; padding: 20px;
-}
-.promo-modal-overlay.show { opacity: 1; pointer-events: auto; }
-.promo-modal {
-  background: #151517; width: 100%; max-width: 360px; border-radius: 24px; overflow: hidden;
-  box-shadow: 0 24px 50px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.12);
-  transform: translateY(20px) scale(0.95); transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1);
-  position: relative;
-}
-.promo-modal-overlay.show .promo-modal { transform: translateY(0) scale(1); }
-.promo-close {
-  position: absolute; top: 12px; right: 12px; width: 32px; height: 32px;
-  background: rgba(0,0,0,0.5); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; color: #fff;
-  cursor: pointer; z-index: 10; border: none; font-size: 18px; line-height: 1;
-}
-.promo-img { width: 100%; height: 220px; object-fit: cover; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); }
-.promo-content { padding: 24px 20px; text-align: center; }
-.promo-content h3 { font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.02em; margin-bottom: 8px; }
-.promo-content p { font-size: 14.5px; color: rgba(255,255,255,0.7); line-height: 1.45; margin-bottom: 22px; }
-.promo-btn {
-  background: #dc2626; color: #fff; border: none; padding: 14px 24px; border-radius: 16px;
-  font-weight: 700; font-size: 15px; cursor: pointer; width: 100%; box-shadow: 0 4px 15px rgba(220,38,38,0.4);
-  transition: transform 0.2s, background 0.2s; font-family: var(--font);
-}
-.promo-btn:active { transform: scale(0.96); background: #b91c1c; }
-
 /* ══════════ MAGAZINE HISTORY & SPECIALS ══════════ */
 .mag-history { display: flex; flex-direction: column; gap: 24px; margin-top: 16px; }
 .mag-images { position: relative; height: 280px; border-radius: 20px; }
@@ -901,10 +873,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
   .w-dish-scroll { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; overflow: hidden; padding: 0; }
   .w-dish-item { min-width: 0; width: 100%; flex: none; }
 
-  #wLanding > .w-card:has(.w-store-card) { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  #wLanding > .w-card:has(.w-store-card) > span,
-  #wLanding > .w-card:has(.w-store-card) > h2,
-  #wLanding > .w-card:has(.w-store-card) > p { grid-column: 1 / -1; }
+  #wLanding > .w-card:has(.w-store-card) .w-store-card { max-width: 480px; margin-left: auto; margin-right: auto; }
 
   /* Menu Layout */
   .list { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; padding: 24px 32px; }
@@ -944,19 +913,19 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
     <div id="s-welcome">
       <div class="welcome-hero">
         <div class="welcome-bg">
-          <video src="Videos/Video 1.mp4" autoplay loop muted playsinline preload="auto"></video>
+          <video src="Videos/Video hero.mp4" autoplay loop muted playsinline preload="auto"></video>
         </div>
         <div class="top-navbar">
-          <div class="logo">ALL GRILL</div>
+          <img src="Images/logo-baga.jpg" alt="Baga" class="logo-img">
           <div class="nav-actions">
-            <button class="nav-btn-reserve" onclick="window.open('https://wa.me/584244517727?text=Hola,%20quisiera%20hacer%20una%20reserva.','_blank')">Reservar</button>
+            <button class="nav-btn-reserve" onclick="window.open('https://wa.me/584244573885?text=Hola,%20quisiera%20hacer%20una%20reserva.','_blank')">Reservar</button>
             <button class="nav-btn-order" onclick="enter('delivery')">Pedir</button>
           </div>
         </div>
         <div class="welcome-body">
-          <div class="eyebrow">Parrilla · Brasa · Carbón</div>
-          <h1>All<br>Grill</h1>
-          <p class="tagline">Carnes a la brasa, como debe ser.<br>Selecciona la experiencia que deseas hoy:</p>
+          <div class="eyebrow">Nada se compara</div>
+          <h1>Baga</h1>
+          <p class="tagline">Cocina de autor con sello propio.<br>Selecciona la experiencia que deseas hoy:</p>
           <div class="w-cta-group">
             <button class="w-cta-primary" onclick="enter('delivery')">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
@@ -985,11 +954,11 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
           <div class="mag-history">
             <div class="mag-text" style="text-align:center;">
               <span style="font-size:11px; text-transform:uppercase; letter-spacing:0.25em; color:var(--primary); font-weight:500; display:block; margin-bottom:12px;">Nuestra Historia</span>
-              <h3>El arte de la brasa<br>y la buena mesa</h3>
-              <p>Selección rigurosa de los mejores cortes, asados a fuego lento con el aroma inconfundible del carbón vegetal y leña. Una experiencia gastronómica de altura.</p>
+              <h3>Cocina de autor<br>con sello propio</h3>
+              <p>Ingredientes de carácter, técnica de autor y una presentación que sorprende. Una experiencia gastronómica donde nada se compara.</p>
             </div>
             <div class="mag-images" style="margin-top: 16px;">
-              <img src="Images/Home.jpg" alt="Ambiente" class="mag-img-main" style="width: 100%; border-radius: 8px;">
+              <img src="Imagenes/Pasta 1.jpg" alt="Ambiente Baga" class="mag-img-main" style="width: 100%; border-radius: 8px;">
             </div>
           </div>
         </div>
@@ -997,37 +966,37 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
         <!-- Sección Especialidades (Dishszo Style) -->
         <div class="specials-menu">
           <div class="specials-header">
-            <span>Para Compartir</span>
+            <span>Platos Exóticos</span>
             <h3>Nuestro Menú Especial</h3>
           </div>
           <div class="specials-content">
             <div class="specials-preview">
-              <img src="Images/Parrilla mixta.jpg" alt="Parrilla Mixta" id="sp-preview">
+              <img src="Imagenes/CANNOLI STEAK TARTAR.jpg" alt="Cannoli steak tartar" id="sp-preview">
             </div>
             <div class="specials-list">
-              <div class="special-item active" onmouseover="document.getElementById('sp-preview').src='Images/Parrilla mixta.jpg'" onclick="this.parentNode.querySelectorAll('.special-item').forEach(e=>e.classList.remove('active')); this.classList.add('active');">
+              <div class="special-item active" onmouseover="document.getElementById('sp-preview').src='Imagenes/CANNOLI STEAK TARTAR.jpg'" onclick="this.parentNode.querySelectorAll('.special-item').forEach(e=>e.classList.remove('active')); this.classList.add('active');">
                 <div class="si-top">
-                  <h4>Parrilla Familiar</h4>
+                  <h4>Cannoli Steak Tartar</h4>
                   <div class="si-dots"></div>
-                  <div class="si-price">$45</div>
+                  <div class="si-price">€9,00</div>
                 </div>
-                <p>Res, cerdo, pollo, chorizos y contornos</p>
+                <p>Cannoli frito relleno de tartar de lomito, yema de huevo y esencia de sarrapia</p>
               </div>
-              <div class="special-item" onmouseover="document.getElementById('sp-preview').src='Images/Costillas BBQ.jpg'" onclick="this.parentNode.querySelectorAll('.special-item').forEach(e=>e.classList.remove('active')); this.classList.add('active');">
+              <div class="special-item" onmouseover="document.getElementById('sp-preview').src='Imagenes/Pork Belly.jpg'" onclick="this.parentNode.querySelectorAll('.special-item').forEach(e=>e.classList.remove('active')); this.classList.add('active');">
                 <div class="si-top">
-                  <h4>Costillas St. Louis</h4>
+                  <h4>Pork Belly</h4>
                   <div class="si-dots"></div>
-                  <div class="si-price">$22</div>
+                  <div class="si-price">€7,99</div>
                 </div>
-                <p>Glaseado de la casa con papas rústicas</p>
+                <p>Pork belly crujiente, reducción de tamarindo y peperoncino</p>
               </div>
-              <div class="special-item" onmouseover="document.getElementById('sp-preview').src='Images/Home.jpg'" onclick="this.parentNode.querySelectorAll('.special-item').forEach(e=>e.classList.remove('active')); this.classList.add('active');">
+              <div class="special-item" onmouseover="document.getElementById('sp-preview').src='Imagenes/Lumpias.jpg'" onclick="this.parentNode.querySelectorAll('.special-item').forEach(e=>e.classList.remove('active')); this.classList.add('active');">
                 <div class="si-top">
-                  <h4>Corte Premium</h4>
+                  <h4>Lumpias Gourmet 🌶</h4>
                   <div class="si-dots"></div>
-                  <div class="si-price">$18</div>
+                  <div class="si-price">€11,00</div>
                 </div>
-                <p>Bife de chorizo, ensalada y yuca frita</p>
+                <p>Paté de morcilla, cebollas caramelizadas y queso manchego</p>
               </div>
             </div>
           </div>
@@ -1039,44 +1008,68 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
             EXPERIENCIA EN VIVO
           </span>
-          <h2>La Experiencia All Grill</h2>
+          <h2>La Experiencia Baga</h2>
           <p style="margin-bottom:8px;">Desliza para explorar la preparación de nuestras carnes, coctelería y postres.</p>
 
           <!-- Video Slider deslizable con Snap -->
           <div class="video-carousel-wrap">
-            
-            <!-- Video 1: Carnes -->
+
+            <!-- Video 1: Coctelería -->
             <div class="video-card-item">
-              <video class="story-video" src="Videos/Video 1.mp4" autoplay muted loop playsinline preload="auto"></video>
+              <video class="story-video" src="Videos/Video de cocteleria.mp4" autoplay muted loop playsinline preload="auto"></video>
               <div class="video-card-overlay">
-                <div class="video-tag-pill">🥩 01 · Carnes a la Brasa</div>
+                <div class="video-tag-pill">🍹 01 · Coctelería de Autor</div>
                 <div class="video-card-bottom">
-                  <h4>Cortes Seleccionados</h4>
-                  <p>Cocción a fuego lento con el aroma inconfundible del carbón vegetal.</p>
+                  <h4>Tragos con Sello Propio</h4>
+                  <p>Cócteles y mocktails de autor pensados para acompañar cada momento.</p>
                 </div>
               </div>
             </div>
 
-            <!-- Video 2: Bebidas -->
+            <!-- Video 2: Hamburguesas -->
             <div class="video-card-item">
-              <video class="story-video" src="Videos/Video 2.mp4" autoplay muted loop playsinline preload="auto"></video>
+              <video class="story-video" src="Videos/Hamburguesa.mp4" autoplay muted loop playsinline preload="auto"></video>
               <div class="video-card-overlay">
-                <div class="video-tag-pill">🍹 02 · Coctelería de Autor</div>
+                <div class="video-tag-pill">🍔 02 · Hamburguesas Gourmet</div>
                 <div class="video-card-bottom">
-                  <h4>Bebidas & Mezclas</h4>
-                  <p>Tragos refrescantes y cócteles artesanales para el maridaje perfecto.</p>
+                  <h4>Ribeye de Toro Venezolano</h4>
+                  <p>Cortes premium y combinaciones propias, como la icónica hamburguesa Baga.</p>
                 </div>
               </div>
             </div>
 
-            <!-- Video 3: Postres -->
+            <!-- Video 3: Entradas / Carpaccio -->
             <div class="video-card-item">
-              <video class="story-video" src="Videos/Video 3.mp4" autoplay muted loop playsinline preload="auto"></video>
+              <video class="story-video" src="Videos/Video de Carpaccio.mp4" autoplay muted loop playsinline preload="auto"></video>
               <div class="video-card-overlay">
-                <div class="video-tag-pill">🍰 03 · Postres Especiales</div>
+                <div class="video-tag-pill">🥩 03 · Entradas de Autor</div>
                 <div class="video-card-bottom">
-                  <h4>El Cierre Dulce</h4>
-                  <p>Creaciones artesanales para culminar una experiencia gastronómica única.</p>
+                  <h4>Carpaccio Clásico con un Giro</h4>
+                  <p>Finas láminas de lomito, espuma de pesto y toques que sorprenden.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 4: Pasta -->
+            <div class="video-card-item">
+              <video class="story-video" src="Videos/Hoy les queremos presentar lo que para nosotros es una de las obras más relevantes de Otto, inspirada en sabores de Italia, con el toque de creatividad que nos caracteriza..mp4" autoplay muted loop playsinline preload="auto"></video>
+              <div class="video-card-overlay">
+                <div class="video-tag-pill">🍝 04 · Pasta con Sello Propio</div>
+                <div class="video-card-bottom">
+                  <h4>Inspiración Italiana, Toque Baga</h4>
+                  <p>Una de las obras más relevantes de Otto, con la creatividad que nos caracteriza.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video 5: Ambiente -->
+            <div class="video-card-item">
+              <video class="story-video" src="Videos/Video de amigas compartiendo.mp4" autoplay muted loop playsinline preload="auto"></video>
+              <div class="video-card-overlay">
+                <div class="video-tag-pill">🥂 05 · La Experiencia Baga</div>
+                <div class="video-card-bottom">
+                  <h4>Momentos que se Comparten</h4>
+                  <p>Nada se compara con disfrutar Baga junto a los tuyos.</p>
                 </div>
               </div>
             </div>
@@ -1088,16 +1081,18 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
             <span class="v-dot active"></span>
             <span class="v-dot"></span>
             <span class="v-dot"></span>
+            <span class="v-dot"></span>
+            <span class="v-dot"></span>
           </div>
         </div>
 
-        <!-- Sección 2: Liderazgo & Visión (CEO Antonieta Ochoa en Video) -->
+        <!-- Sección 2: Lo que dicen de Baga (Testimonio en Video) -->
         <div class="w-card" style="padding:0; overflow:hidden; border:1px solid var(--border); position:relative; height:460px; border-radius:8px;">
-          <video class="ceo-full-video" src="Videos/Video 4.mp4" muted loop playsinline autoplay style="width:100%; height:100%; object-fit:cover; display:block; filter: brightness(0.85);"></video>
+          <video class="ceo-full-video" src="Videos/Testimonio influencer.mp4" muted loop playsinline autoplay style="width:100%; height:100%; object-fit:cover; display:block; filter: brightness(0.85);"></video>
           <div class="ceo-video-overlay" style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(18,21,25,0.4) 0%, transparent 45%, rgba(18,21,25,0.95) 100%); display:flex; flex-direction:column; justify-content:space-between; padding:24px; color:#fff; pointer-events:none;">
             <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
               <span class="w-card-tag" style="margin:0; background:rgba(18,21,25,0.8); border:1px solid var(--primary); padding:6px 12px; border-radius:2px; font-family:var(--font); color:var(--primary); font-size:11px;">
-                LIDERAZGO & VISIÓN
+                LO QUE DICEN DE NOSOTROS
               </span>
               <button id="ceoAudioBtn" class="w-store-btn" style="flex:none; padding:8px 14px; background:rgba(18,21,25,0.8); border:1px solid var(--primary); border-radius:2px; pointer-events:auto; display:flex; align-items:center; gap:8px; color:var(--primary); font-family:var(--font); font-size:11px; text-transform:uppercase; letter-spacing:0.05em;" onclick="toggleCeoAudio(event)">
                 <div id="ceoEqBars" class="eq-bars hidden">
@@ -1109,39 +1104,39 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
             </div>
 
             <div style="margin-top:auto; text-align:center;">
-              <h2 style="font-family:var(--font-serif); font-size:36px; font-weight:600; color:#ffffff; letter-spacing:-0.01em; margin:0; font-style:italic;">Antonieta Ochoa</h2>
-              <div style="font-family:var(--font); font-size:13px; font-weight:500; color:var(--primary); margin-top:8px; letter-spacing:0.1em; text-transform:uppercase;">CEO & Fundadora · All Grill</div>
+              <h2 style="font-family:var(--font-serif); font-size:32px; font-weight:600; color:#ffffff; letter-spacing:-0.01em; margin:0; font-style:italic;">"Una experiencia que no se olvida"</h2>
+              <div style="font-family:var(--font); font-size:13px; font-weight:500; color:var(--primary); margin-top:8px; letter-spacing:0.1em; text-transform:uppercase;">Reseña de un creador de contenido</div>
             </div>
           </div>
         </div>
 
-        <!-- Sección 3: El Ritual del Parrillero (Filosofía 01-02-03) -->
+        <!-- Sección 3: Nuestra Cocina de Autor (Filosofía 01-02-03) -->
         <div class="w-card">
           <span class="w-card-tag">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             FILOSOFÍA DE COCINA
           </span>
-          <h2>El Ritual del Parrillero</h2>
+          <h2>Nuestra Cocina de Autor</h2>
           <div class="ritual-num-list">
             <div class="ritual-num-item">
               <div class="ritual-num-badge">01</div>
               <div class="ritual-num-body">
-                <h4>Selección de Origen</h4>
-                <p>Selección rigurosa de los mejores cortes de res, cerdo y ave, garantizando máxima frescura, jugosidad y calidad.</p>
+                <h4>Ingredientes con Carácter</h4>
+                <p>Ribeye de toro venezolano, burrata fresca, trufa y quesos selectos como base de cada creación.</p>
               </div>
             </div>
             <div class="ritual-num-item">
               <div class="ritual-num-badge">02</div>
               <div class="ritual-num-body">
-                <h4>Alquimia de Brasas</h4>
-                <p>Uso de 100% carbón vegetal de alta densidad y leña que aportan el sabor auténtico a la parrilla.</p>
+                <h4>Técnica de Autor</h4>
+                <p>Espumas, texturas y fusiones propias que convierten cada plato en una experiencia distinta.</p>
               </div>
             </div>
             <div class="ritual-num-item">
               <div class="ritual-num-badge">03</div>
               <div class="ritual-num-body">
-                <h4>Control de Temperatura</h4>
-                <p>Sellado a fuego directo para conservar los jugos y lograr el término deseado por el cliente.</p>
+                <h4>Sello Propio</h4>
+                <p>Cada plato pensado para sorprender en sabor y presentación. Nada se compara.</p>
               </div>
             </div>
           </div>
@@ -1153,29 +1148,29 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             NUESTRO EQUIPO
           </span>
-          <h2>El Talento Detrás del Fuego</h2>
+          <h2>El Talento Detrás de Baga</h2>
           <p>Un equipo de pasión culinaria dedicado a crear momentos memorables en cada mesa.</p>
 
           <div class="team-scroll">
             <div class="team-item">
-              <div class="team-avatar"><img src="Images/Home.jpg" alt="Maestro Parrillero"></div>
-              <div class="team-name">Maestro Parrillero</div>
-              <div class="team-role">Fuego & Términos</div>
-              <div class="team-desc">Dominio absoluto de la leña y control de brasas al punto exacto.</div>
+              <div class="team-avatar"><img src="Imagenes/Pasta 2.jpg" alt="Chef de Cocina"></div>
+              <div class="team-name">Chef de Cocina</div>
+              <div class="team-role">Sabor & Técnica</div>
+              <div class="team-desc">Creador de la cocina de autor que distingue cada plato de Baga.</div>
             </div>
 
             <div class="team-item">
-              <div class="team-avatar"><img src="Images/Parrilla mixta.jpg" alt="Chef Ejecutivo"></div>
-              <div class="team-name">Chef Ejecutivo</div>
-              <div class="team-role">Sabor & Sazones</div>
-              <div class="team-desc">Creador de nuestra guasacaca artesanal y adobos criollos.</div>
+              <div class="team-avatar"><img src="Imagenes/Coctel 1.jpg" alt="Bartender"></div>
+              <div class="team-name">Bartender</div>
+              <div class="team-role">Coctelería de Autor</div>
+              <div class="team-desc">Responsable de nuestra carta de cócteles y mocktails de la casa.</div>
             </div>
 
             <div class="team-item">
-              <div class="team-avatar"><img src="Images/Costillas BBQ.jpg" alt="Equipo de Atención"></div>
-              <div class="team-name">Equipo Delivery</div>
+              <div class="team-avatar"><img src="Imagenes/Pasta 3.jpg" alt="Equipo de Sala"></div>
+              <div class="team-name">Equipo de Sala</div>
               <div class="team-role">Servicio & Calidez</div>
-              <div class="team-desc">Comprometidos con la entrega rápida y empaque impecable.</div>
+              <div class="team-desc">Comprometidos con una experiencia impecable en cada visita.</div>
             </div>
           </div>
         </div>
@@ -1188,24 +1183,24 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
           </span>
           <h2>Platos Estrella de la Casa</h2>
           <div class="w-dish-scroll">
-            <div class="w-dish-item" onclick="enter('delivery'); setTimeout(()=>openSheet('par'), 300)">
-              <div class="w-dish-img"><img src="Images/Parrilla mixta.jpg" alt="Parrilla mixta"></div>
+            <div class="w-dish-item" onclick="enter('delivery'); setTimeout(()=>openSheet('bh-baga'), 300)">
+              <div class="w-dish-img"><img src="Imagenes/Hamburguesa Baga.jpg" alt="Hamburguesa Baga"></div>
               <div class="w-dish-info">
-                <h4>Parrilla mixta</h4>
-                <p>Res, pollo y chorizo al carbón con guasacaca y yuca al mojo.</p>
+                <h4>Hamburguesa Baga</h4>
+                <p>Ribeye de toro venezolano, cheddar, mermelada de tocino y huevo soleado.</p>
                 <div class="w-dish-price">
-                  <span>$12,90</span>
+                  <span>€14,50</span>
                   <span style="font-size:11px; font-weight:700; background:rgba(255,255,255,0.12); padding:4px 10px; border-radius:8px;">Ver ➔</span>
                 </div>
               </div>
             </div>
-            <div class="w-dish-item" onclick="enter('delivery'); setTimeout(()=>openSheet('cos'), 300)">
-              <div class="w-dish-img"><img src="Images/Costillas BBQ.jpg" alt="Costillas BBQ"></div>
+            <div class="w-dish-item" onclick="enter('delivery'); setTimeout(()=>openSheet('can'), 300)">
+              <div class="w-dish-img"><img src="Imagenes/CANNOLI STEAK TARTAR.jpg" alt="Cannoli steak tartar"></div>
               <div class="w-dish-info">
-                <h4>Costillas BBQ</h4>
-                <p>Costilla de cerdo a fuego lento, glaseada en salsa de la casa.</p>
+                <h4>Cannoli Steak Tartar</h4>
+                <p>Cannoli frito relleno de tartar de lomito, yema de huevo y esencia de sarrapia.</p>
                 <div class="w-dish-price">
-                  <span>$11,50</span>
+                  <span>€9,00</span>
                   <span style="font-size:11px; font-weight:700; background:rgba(255,255,255,0.12); padding:4px 10px; border-radius:8px;">Ver ➔</span>
                 </div>
               </div>
@@ -1221,47 +1216,41 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                 INSTAGRAM FEED
               </span>
-              <h2 style="font-size:20px;">@allgrillvalencia</h2>
+              <h2 style="font-size:20px;">@bagavzla</h2>
             </div>
-            <button class="w-store-btn" style="flex:none; padding:6px 14px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.18);" onclick="window.open('https://www.instagram.com/allgrillvalencia/?hl=es','_blank')">Seguir ➔</button>
+            <button class="w-store-btn" style="flex:none; padding:6px 14px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.18);" onclick="window.open('https://www.instagram.com/bagavzla/?hl=es','_blank')">Seguir ➔</button>
           </div>
-          <p style="font-size:13px; margin-bottom:12px;">Sabor, fuego y precisión en cada plato.</p>
+          <p style="font-size:13px; margin-bottom:12px;">Cocina de autor, coctelería y sabor en cada plato.</p>
 
           <div class="insta-grid">
-            <div class="insta-item" onclick="window.open('https://www.instagram.com/allgrillvalencia/?hl=es','_blank')" style="cursor:pointer;">
-              <img src="Images/Home.jpg" alt="Parrilla All Grill">
+            <div class="insta-item" onclick="window.open('https://www.instagram.com/bagavzla/?hl=es','_blank')" style="cursor:pointer;">
+              <img src="Imagenes/Coctel 1.jpg" alt="Cóctel Baga">
               <div class="insta-overlay">❤️ 1.4k</div>
             </div>
-            <div class="insta-item" onclick="window.open('https://www.instagram.com/allgrillvalencia/?hl=es','_blank')" style="cursor:pointer;">
-              <img src="Images/Parrilla mixta.jpg" alt="Parrilla mixta">
+            <div class="insta-item" onclick="window.open('https://www.instagram.com/bagavzla/?hl=es','_blank')" style="cursor:pointer;">
+              <img src="Imagenes/Pasta 1.jpg" alt="Pasta Baga">
               <div class="insta-overlay">❤️ 2.8k</div>
             </div>
-            <div class="insta-item" onclick="window.open('https://www.instagram.com/allgrillvalencia/?hl=es','_blank')" style="cursor:pointer;">
-              <img src="Images/Costillas BBQ.jpg" alt="Costillas BBQ">
+            <div class="insta-item" onclick="window.open('https://www.instagram.com/bagavzla/?hl=es','_blank')" style="cursor:pointer;">
+              <img src="Imagenes/Coctel 2.jpg" alt="Cóctel Baga">
               <div class="insta-overlay">❤️ 3.1k</div>
             </div>
           </div>
         </div>
 
-        <!-- Sección 7: Ubicación y Videos Recorrido de las Sedes -->
+        <!-- Sección 7: Ubicación y Video de la Sede -->
         <div class="w-card w-card-mesh-glow">
           <span class="w-card-tag">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            UBICACIÓN & RECORRIDOS
+            UBICACIÓN
           </span>
-          <h2>Visítanos en nuestras sedes</h2>
-          <p>Reproduce el video de recorrido para ver la ruta exacta de llegada a cada sede. Atención de Lunes a Domingo de 11:30 AM a 10:30 PM.</p>
-          
-          <!-- Sede 1: El Viñedo -->
+          <h2>Visítanos en Baga</h2>
+          <p>Atención de Lunes a Domingo de 12:30 pm a 12 am.</p>
+
+          <!-- Sede: C.C Paseo Garibaldi -->
           <div class="w-store-card">
             <div class="w-store-photo" style="height:270px; position:relative; overflow:hidden;">
-              <video src="Videos/Sede El Viñedo.mp4" muted loop playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover; display:block;"></video>
-              
-              <!-- Badge Elegante -->
-              <div style="position:absolute; top:12px; left:12px; background:rgba(18,21,25,0.85); border:1px solid var(--primary); padding:6px 12px; border-radius:2px; font-size:11px; font-weight:500; font-family:var(--font); color:var(--primary); text-transform:uppercase; letter-spacing:0.05em; display:flex; align-items:center; gap:6px; z-index:2;">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span>Vídeo de cómo llegar</span>
-              </div>
+              <video src="Videos/Video de amigas compartiendo.mp4" muted loop playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover; display:block;"></video>
 
               <!-- Botón Play / Pausa Interactivo sin sonido -->
               <div class="store-video-play-btn" onclick="toggleStoreVideo(this)" style="position:absolute; inset:0; z-index:3; display:flex; align-items:center; justify-content:center; background:rgba(18,21,25,0.3); cursor:pointer; transition:background .3s;">
@@ -1272,40 +1261,11 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
             </div>
 
             <div class="w-store-body">
-              <div class="w-store-name">📍 Sede El Viñedo</div>
-              <div class="w-store-addr">Av. Bolívar Norte, Sector El Viñedo</div>
+              <div class="w-store-name">📍 Baga · C.C Paseo Garibaldi</div>
+              <div class="w-store-addr">C.C Paseo Garibaldi, Valencia</div>
               <div class="w-store-actions">
-                <div class="w-store-btn" onclick="window.open('https://maps.google.com','_blank')">🗺️ Google Maps</div>
-                <div class="w-store-btn" onclick="window.open('https://wa.me/584244517727','_blank')">💬 WhatsApp</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Sede 2: C.C. Chirikayen -->
-          <div class="w-store-card">
-            <div class="w-store-photo" style="height:270px; position:relative; overflow:hidden;">
-              <video src="Videos/Sede C.C Chirikayen.mp4" muted loop playsinline preload="metadata" style="width:100%; height:100%; object-fit:cover; display:block;"></video>
-              
-              <!-- Badge Elegante -->
-              <div style="position:absolute; top:12px; left:12px; background:rgba(18,21,25,0.85); border:1px solid var(--primary); padding:6px 12px; border-radius:2px; font-size:11px; font-weight:500; font-family:var(--font); color:var(--primary); text-transform:uppercase; letter-spacing:0.05em; display:flex; align-items:center; gap:6px; z-index:2;">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span>Vídeo de cómo llegar</span>
-              </div>
-
-              <!-- Botón Play / Pausa Interactivo sin sonido -->
-              <div class="store-video-play-btn" onclick="toggleStoreVideo(this)" style="position:absolute; inset:0; z-index:3; display:flex; align-items:center; justify-content:center; background:rgba(18,21,25,0.3); cursor:pointer; transition:background .3s;">
-                <div class="play-icon-circle" style="width:64px; height:64px; border-radius:50%; background:rgba(18,21,25,0.6); border:1px solid var(--primary); display:grid; place-items:center; transition:transform .2s ease, opacity .3s ease; color:var(--primary);">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="w-store-body">
-              <div class="w-store-name">📍 Sede C.C. Chirikayen</div>
-              <div class="w-store-addr">C.C. Chirikayen, Sector El Trigal / Naguanagua</div>
-              <div class="w-store-actions">
-                <div class="w-store-btn" onclick="window.open('https://maps.google.com','_blank')">🗺️ Google Maps</div>
-                <div class="w-store-btn" onclick="window.open('https://wa.me/584244517727','_blank')">💬 WhatsApp</div>
+                <div class="w-store-btn" onclick="window.open('https://maps.app.goo.gl/hNUG2V8sUhYHGDdAA?g_st=ic','_blank')">🗺️ Google Maps</div>
+                <div class="w-store-btn" onclick="window.open('https://wa.me/584244573885','_blank')">💬 WhatsApp</div>
               </div>
             </div>
           </div>
@@ -1327,7 +1287,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
             <div class="iconbtn" onclick="goHome()" title="Volver al Inicio" style="width:32px; height:32px; background:rgba(0,0,0,0.05); border:1px solid rgba(0,0,0,0.08);">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="width:16px; height:16px;"><path d="M15 18l-6-6 6-6"/></svg>
             </div>
-            <div class="brand" onclick="goHome()" style="cursor:pointer;">All Grill</div>
+            <img src="Images/logo-baga.jpg" alt="Baga" class="brand-img" onclick="goHome()" style="cursor:pointer;">
           </div>
           <div class="nb-r">
             <div class="fxpill">BCV <b id="fx">Bs 36,80</b></div>
@@ -1363,34 +1323,34 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
           <div class="promo-carousel">
             <!-- Slide 1 -->
             <div class="promo-slide ps-bg-1 active">
-              <div class="promo-tag">🔥 PROMO DE BIENVENIDA</div>
+              <div class="promo-tag">🔥 BAGA</div>
               <div>
-                <div class="promo-title">40% OFF en tu primer pedido</div>
-                <div class="promo-sub">Disfruta el mejor sabor al carbón de All Grill</div>
+                <div class="promo-title">Nada se compara</div>
+                <div class="promo-sub">Cocina de autor con sello propio</div>
               </div>
               <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span class="promo-code-pill">Código: ALLGRILL40</span>
-                <button style="background:rgba(255,255,255,0.22); border:1px solid rgba(255,255,255,0.4); color:#fff; padding:6px 14px; border-radius:99px; font-size:11px; font-weight:700; cursor:pointer;" onclick="filterCatByTag('promo')">Pedir ➔</button>
+                <span class="promo-code-pill">Menú completo</span>
+                <button style="background:rgba(255,255,255,0.22); border:1px solid rgba(255,255,255,0.4); color:#fff; padding:6px 14px; border-radius:99px; font-size:11px; font-weight:700; cursor:pointer;" onclick="filterCatByTag('all')">Pedir ➔</button>
               </div>
             </div>
             <!-- Slide 2 -->
             <div class="promo-slide ps-bg-2">
-              <div class="promo-tag">🥩 COMBO DE LA SEMANA</div>
+              <div class="promo-tag">🍔 RECOMENDADO</div>
               <div>
-                <div class="promo-title">Combo Parrillero $14,99</div>
-                <div class="promo-sub">Parrilla mixta + Papelón + Quesillo</div>
+                <div class="promo-title">Hamburguesa Baga €14,50</div>
+                <div class="promo-sub">Ribeye de toro, cheddar, huevo soleado y salsa Baga</div>
               </div>
               <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span class="promo-code-pill">Ahorra el 20%</span>
-                <button style="background:rgba(255,255,255,0.22); border:1px solid rgba(255,255,255,0.4); color:#fff; padding:6px 14px; border-radius:99px; font-size:11px; font-weight:700; cursor:pointer;" onclick="openSheet('pro1')">Ver combo ➔</button>
+                <span class="promo-code-pill">Favorito de la casa</span>
+                <button style="background:rgba(255,255,255,0.22); border:1px solid rgba(255,255,255,0.4); color:#fff; padding:6px 14px; border-radius:99px; font-size:11px; font-weight:700; cursor:pointer;" onclick="openSheet('bh-baga')">Ver plato ➔</button>
               </div>
             </div>
             <!-- Slide 3 -->
             <div class="promo-slide ps-bg-3">
               <div class="promo-tag">🚀 DELIVERY GRATIS</div>
               <div>
-                <div class="promo-title">Envío $0 en tu zona</div>
-                <div class="promo-sub">En compras superiores a $20</div>
+                <div class="promo-title">Envío €0 en tu zona</div>
+                <div class="promo-sub">En compras superiores a €20</div>
               </div>
               <div style="display:flex; justify-content:space-between; align-items:center;">
                 <span class="promo-code-pill">Automático al checkout</span>
@@ -1420,64 +1380,73 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
               </div>
               <div class="cat-card-name">Destacados</div>
             </div>
-            <!-- Promos -->
-            <div class="cat-card" data-cat="promo" onclick="filterCat(this)">
+            <!-- Entradas -->
+            <div class="cat-card" data-cat="entradas" onclick="filterCat(this)">
               <div class="cat-icon-box">
                 <svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-                  <defs><linearGradient id="gFlame" x1="0" y1="36" x2="36" y2="0"><stop offset="0%" stop-color="#E63946"/><stop offset="50%" stop-color="#F4A261"/><stop offset="100%" stop-color="#E76F51"/></linearGradient></defs>
-                  <path d="M18 2C18 2 11 11 11 19c0 4.4 3.1 8 7 8s7-3.6 7-8c0-3-1.8-6.2-4.5-8.5C18.2 10.2 18 2 18 2z" fill="url(#gFlame)" filter="drop-shadow(0 3px 6px rgba(230,57,70,0.45))"/>
-                  <path d="M18 13c0 0-3.5 4.5-3.5 8 0 1.9 1.6 3.5 3.5 3.5s3.5-1.6 3.5-3.5c0-1.5-1-3.2-2.3-4.5C18.1 16.2 18 13 18 13z" fill="#FFF3B0"/>
+                  <defs><linearGradient id="gEntrada" x1="0" y1="0" x2="36" y2="36"><stop offset="0%" stop-color="#8a7a2c"/><stop offset="100%" stop-color="#FFD407"/></linearGradient></defs>
+                  <path d="M18 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="url(#gEntrada)"/>
+                  <path d="M5 24c0-7.2 5.8-13 13-13s13 5.8 13 13H5z" fill="url(#gEntrada)" filter="drop-shadow(0 3px 6px rgba(255,212,7,0.35))"/>
+                  <rect x="3" y="25" width="30" height="4" rx="2" fill="#3a3a3a"/>
                 </svg>
               </div>
-              <div class="cat-card-name">Promos</div>
+              <div class="cat-card-name">Entradas</div>
             </div>
-            <!-- Parrillas -->
-            <div class="cat-card" data-cat="parrilla" onclick="filterCat(this)">
+            <!-- Pasta -->
+            <div class="cat-card" data-cat="pasta" onclick="filterCat(this)">
               <div class="cat-icon-box">
                 <svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-                  <defs><linearGradient id="gSteak" x1="0" y1="0" x2="36" y2="36"><stop offset="0%" stop-color="#8B0000"/><stop offset="50%" stop-color="#D32F2F"/><stop offset="100%" stop-color="#FF7043"/></linearGradient></defs>
-                  <path d="M10 6c-3.3 0-6 2.7-6 6 0 6.6 6 12 12 18 4.4 0 12-4 12-12 0-6.6-6-12-18-12z" fill="url(#gSteak)" filter="drop-shadow(0 3px 6px rgba(139,0,0,0.45))"/>
-                  <path d="M11 12c1 0 3 1.5 3 3.5s-2 3.5-3 3.5" stroke="#FFF" stroke-width="2" stroke-linecap="round" opacity=".8"/>
-                  <path d="M18 14c1.5 0 4 2 4 4.5S20 23 18 23" stroke="#FFF" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+                  <defs><linearGradient id="gPasta" x1="0" y1="36" x2="36" y2="0"><stop offset="0%" stop-color="#c9a825"/><stop offset="100%" stop-color="#FFD407"/></linearGradient></defs>
+                  <ellipse cx="18" cy="26" rx="14" ry="6" fill="url(#gPasta)" filter="drop-shadow(0 3px 6px rgba(255,212,7,0.35))"/>
+                  <path d="M8 22c2-6 4-10 2-16M14 23c2-7 3-11 1-17M20 23c2-7 3-11 1-17M26 22c2-6 4-10 2-16" stroke="#fff8d6" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>
                 </svg>
               </div>
-              <div class="cat-card-name">Parrillas</div>
+              <div class="cat-card-name">Pasta</div>
             </div>
-            <!-- Compartir -->
-            <div class="cat-card" data-cat="compartir" onclick="filterCat(this)">
+            <!-- Hamburguesas -->
+            <div class="cat-card" data-cat="hamburguesas" onclick="filterCat(this)">
               <div class="cat-icon-box">
                 <svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-                  <defs><linearGradient id="gPlatter" x1="0" y1="0" x2="36" y2="36"><stop offset="0%" stop-color="#E67E22"/><stop offset="100%" stop-color="#D35400"/></linearGradient></defs>
-                  <path d="M18 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="url(#gPlatter)"/>
-                  <path d="M5 24c0-7.2 5.8-13 13-13s13 5.8 13 13H5z" fill="url(#gPlatter)" filter="drop-shadow(0 3px 6px rgba(211,84,0,0.4))"/>
-                  <rect x="3" y="25" width="30" height="4" rx="2" fill="#8B5A2B"/>
+                  <defs><linearGradient id="gBurger" x1="0" y1="0" x2="36" y2="36"><stop offset="0%" stop-color="#a87e1c"/><stop offset="100%" stop-color="#FFD407"/></linearGradient></defs>
+                  <path d="M6 14c0-5 5.4-9 12-9s12 4 12 9H6z" fill="url(#gBurger)" filter="drop-shadow(0 3px 6px rgba(255,212,7,0.35))"/>
+                  <rect x="5" y="16" width="26" height="3.5" rx="1.5" fill="#7a3f16"/>
+                  <path d="M6 23c0 3.9 5.4 7 12 7s12-3.1 12-7H6z" fill="#e8b657"/>
                 </svg>
               </div>
-              <div class="cat-card-name">Compartir</div>
-            </div>
-            <!-- Dulces -->
-            <div class="cat-card" data-cat="dulce" onclick="filterCat(this)">
-              <div class="cat-icon-box">
-                <svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-                  <defs><linearGradient id="gCake" x1="0" y1="0" x2="36" y2="36"><stop offset="0%" stop-color="#FF85A1"/><stop offset="50%" stop-color="#FBB1BD"/><stop offset="100%" stop-color="#F72585"/></linearGradient></defs>
-                  <path d="M6 26L30 18v8H6z" fill="url(#gCake)" filter="drop-shadow(0 3px 6px rgba(247,37,133,0.35))"/>
-                  <path d="M6 18c0-3.3 12-10 24-10v8C18 16 6 18 6 18z" fill="#FFF3B0"/>
-                  <circle cx="28" cy="7" r="3" fill="#D90429"/>
-                </svg>
-              </div>
-              <div class="cat-card-name">Dulces</div>
+              <div class="cat-card-name">Hamburguesas</div>
             </div>
             <!-- Bebidas -->
-            <div class="cat-card" data-cat="bebida" onclick="filterCat(this)">
+            <div class="cat-card" data-cat="bebidas" onclick="filterCat(this)">
               <div class="cat-icon-box">
                 <svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-                  <defs><linearGradient id="gDrink" x1="0" y1="0" x2="36" y2="36"><stop offset="0%" stop-color="#48CAE4"/><stop offset="50%" stop-color="#0077B6"/><stop offset="100%" stop-color="#023E8A"/></linearGradient></defs>
-                  <path d="M8 10h20l-2.5 20h-15L8 10z" fill="url(#gDrink)" filter="drop-shadow(0 3px 6px rgba(0,119,182,0.4))"/>
-                  <path d="M6 8h24v2H6z" fill="#90E0EF"/>
-                  <path d="M22 2L17 12" stroke="#FF4D6D" stroke-width="3" stroke-linecap="round"/>
+                  <defs><linearGradient id="gDrink" x1="0" y1="0" x2="36" y2="36"><stop offset="0%" stop-color="#6b5c1a"/><stop offset="100%" stop-color="#e8c433"/></linearGradient></defs>
+                  <path d="M8 10h20l-2.5 20h-15L8 10z" fill="url(#gDrink)" filter="drop-shadow(0 3px 6px rgba(232,196,51,0.35))"/>
+                  <path d="M6 8h24v2H6z" fill="#fff2b0"/>
                 </svg>
               </div>
               <div class="cat-card-name">Bebidas</div>
+            </div>
+            <!-- Cócteles -->
+            <div class="cat-card" data-cat="cocteles" onclick="filterCat(this)">
+              <div class="cat-icon-box">
+                <svg viewBox="0 0 36 36" width="34" height="34" fill="none">
+                  <defs><linearGradient id="gCoctel" x1="0" y1="36" x2="36" y2="0"><stop offset="0%" stop-color="#a86a15"/><stop offset="100%" stop-color="#FFD407"/></linearGradient></defs>
+                  <path d="M6 6h24l-10 12v10h4v2H12v-2h4V18L6 6z" fill="url(#gCoctel)" filter="drop-shadow(0 3px 6px rgba(255,212,7,0.35))"/>
+                </svg>
+              </div>
+              <div class="cat-card-name">Cócteles</div>
+            </div>
+            <!-- Mocktails -->
+            <div class="cat-card" data-cat="mocktails" onclick="filterCat(this)">
+              <div class="cat-icon-box">
+                <svg viewBox="0 0 36 36" width="34" height="34" fill="none">
+                  <defs><linearGradient id="gMocktail" x1="0" y1="0" x2="36" y2="36"><stop offset="0%" stop-color="#7a8f2c"/><stop offset="100%" stop-color="#c9e04a"/></linearGradient></defs>
+                  <path d="M10 8h16l-1.5 6H11.5L10 8z" fill="url(#gMocktail)"/>
+                  <path d="M11.5 14h13L23 28H13l-1.5-14z" fill="url(#gMocktail)" filter="drop-shadow(0 3px 6px rgba(201,224,74,0.35))"/>
+                  <path d="M15 4c0 1.5 2 2 2 4" stroke="#c9e04a" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="cat-card-name">Mocktails</div>
             </div>
           </div>
         </div>
@@ -1497,7 +1466,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
       <div class="screen" id="s-cart">
         <div class="topbar">
           <div class="back" onclick="go('menu')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 18l-6-6 6-6"/></svg></div>
-          <div class="tt">Tu pedido<small>All Grill · Valencia</small></div>
+          <div class="tt">Tu pedido<small>Baga · Valencia</small></div>
         </div>
         <div class="cart-list" id="cartList"></div>
         <div class="summary" id="summary"></div>
@@ -1578,7 +1547,6 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
                     <select class="input" id="city-select" onchange="onCityChange()">
                       <option value="">Selecciona tu ciudad</option>
                       <option value="valencia">Valencia</option>
-                      <option value="caracas">Caracas</option>
                     </select>
                   </div>
 
@@ -1645,21 +1613,12 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
                     <span class="section-title">Selecciona la sede</span>
                   </div>
                   <div id="stores-list">
-                    <div class="co-card card-interactive" style="margin-bottom:8px;" id="store-Chacao" onclick="selectStore('Chacao')">
+                    <div class="co-card card-interactive" id="store-Garibaldi" onclick="selectStore('Garibaldi')">
                       <div class="flex items-center gap-3">
-                        <div class="radio" id="radio-store-Chacao"></div>
+                        <div class="radio" id="radio-store-Garibaldi"></div>
                         <div class="flex-1">
-                          <div style="font-size:13px;font-weight:700;">Sede Valencia Norte</div>
-                          <div style="font-size:11px;color:var(--muted-fg);">Av. Bolivar Norte</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="co-card card-interactive" id="store-LasMercedes" onclick="selectStore('LasMercedes')">
-                      <div class="flex items-center gap-3">
-                        <div class="radio" id="radio-store-LasMercedes"></div>
-                        <div class="flex-1">
-                          <div style="font-size:13px;font-weight:700;">Sede El Viñedo</div>
-                          <div style="font-size:11px;color:var(--muted-fg);">Calle los Cafetales</div>
+                          <div style="font-size:13px;font-weight:700;">Baga · C.C Paseo Garibaldi</div>
+                          <div style="font-size:11px;color:var(--muted-fg);">C.C Paseo Garibaldi, Valencia</div>
                         </div>
                       </div>
                     </div>
@@ -1690,7 +1649,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
                       </div>
                       <div class="summary-row">
                         <span class="summary-label">🕐 Horario</span>
-                        <span class="summary-value">Lun–Dom 11am–10pm</span>
+                        <span class="summary-value">Lun–Dom 12:30pm–12am</span>
                       </div>
                       <div class="summary-divider"></div>
                       <div class="summary-row">
@@ -1789,7 +1748,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
               <div class="co-card" style="background:rgba(248,249,251,.8);">
                 <div class="font-bold text-sm" style="margin-bottom:10px;">ℹ️ Datos de Pago</div>
                 <div class="pay-row pay-amount">
-                  <div><div class="pay-label">Monto a pagar</div><div class="pay-value" id="pay-amount-val">$0,00</div></div>
+                  <div><div class="pay-label">Monto a pagar</div><div class="pay-value" id="pay-amount-val">€0,00</div></div>
                   <button class="copy-btn" onclick="copyText(document.getElementById('pay-amount-val').innerText, this)">📋</button>
                 </div>
                 <div id="pay-details" style="margin-top:8px;"></div>
@@ -1846,11 +1805,11 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
               <div class="summary-row mt-2"><span class="summary-label">🚚 Entrega</span><span class="summary-value" id="conf-delivery">—</span></div>
               <div class="summary-row mt-2"><span class="summary-label">💳 Método de pago</span><span class="summary-value" id="conf-method">—</span></div>
               <hr class="divider">
-              <div class="summary-row"><span class="summary-label" style="font-weight:700;">Total</span><span class="summary-value text-primary" id="conf-total">$0,00</span></div>
+              <div class="summary-row"><span class="summary-label" style="font-weight:700;">Total</span><span class="summary-value text-primary" id="conf-total">€0,00</span></div>
             </div>
             <div style="margin-top:16px;text-align:center;font-size:12px;color:var(--muted-fg);">
               Te notificaremos por WhatsApp cuando tu pedido esté listo.<br/>
-              <span style="font-weight:700;color:var(--fg);">¡Gracias por preferir All Grill!</span>
+              <span style="font-weight:700;color:var(--fg);">¡Gracias por preferir Baga!</span>
             </div>
             <button class="btn-primary mt-6" onclick="resetCheckout()">Hacer otro pedido</button>
           </div>
@@ -1865,7 +1824,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
       <div class="sticky-inner">
         <div>
           <div class="sticky-total-label">Total a pagar</div>
-          <div class="sticky-total-amount" id="sticky-total">$0,00</div>
+          <div class="sticky-total-amount" id="sticky-total">€0,00</div>
         </div>
         <button class="btn-primary sticky-btn" id="sticky-btn" onclick="handleContinue()">Continuar</button>
       </div>
@@ -1887,12 +1846,14 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
             <button class="seg-btn" id="doneness-bien" onclick="setDoneness('Bien cocida')">Bien cocida</button>
           </div>
         </div>
-        <div style="margin-top:10px;">
+        <div style="margin-top:10px;" id="shNoteWrap">
           <div class="opt-h">Nota para la cocina (opcional)</div>
           <input class="input" type="text" id="shNote" placeholder="Ej: Sin cebolla, extra salsa..." style="border-radius:11px; padding:10px 12px; font-size:13px;" />
         </div>
-        <div class="opt-h">Acompañantes · elige lo que quieras</div>
-        <div class="optcard" id="shOpts"></div>
+        <div id="shOptsWrap">
+          <div class="opt-h">Acompañantes · elige lo que quieras</div>
+          <div class="optcard" id="shOpts"></div>
+        </div>
       </div>
       <div class="sheet-foot">
         <div class="qty">
@@ -1902,7 +1863,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
         </div>
         <button class="btn spread" onclick="addFromSheet()">
           <span>Agregar</span>
-          <span class="amt" id="shAmt">$0,00</span>
+          <span class="amt" id="shAmt">€0,00</span>
         </button>
       </div>
     </div>
@@ -1910,21 +1871,9 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
     <!-- ══ BAG FLOTANTE ══ -->
     <div class="bag" id="bag" onclick="go('cart')">
       <div class="l"><div class="cnt" id="bagCnt">0</div><div class="lab" id="bagLab">Ver pedido</div></div>
-      <div class="r"><span id="bagTot">$0,00</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 18l6-6-6-6"/></svg></div>
+      <div class="r"><span id="bagTot">€0,00</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 18l6-6-6-6"/></svg></div>
     </div>
 
-    <!-- ══ PROMO MODAL ══ -->
-    <div class="promo-modal-overlay" id="promoModal">
-      <div class="promo-modal">
-        <button class="promo-close" onclick="closePromo()">×</button>
-        <img src="Images/Parrilla mixta.jpg" alt="Promo" class="promo-img">
-        <div class="promo-content">
-          <h3>¡Hoy 2x1 en Bebidas!</h3>
-          <p>Lleva tu Parrilla Familiar y disfruta del doble de frescura. Solo por tiempo limitado.</p>
-          <button class="promo-btn" onclick="closePromo()">Aprovechar promoción</button>
-        </div>
-      </div>
-    </div>
 
     <!-- ══ TOAST ══ -->
     <div class="toast" id="toast"></div>
@@ -1933,27 +1882,62 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; 
 </div><!-- /app -->
 
 <script>
-const FX = 36.80;
-const money = n => '$' + n.toFixed(2).replace('.', ',');
+const FX = 870.04;
+const money = n => '€' + n.toFixed(2).replace('.', ',');
 const bs    = n => 'Bs ' + (n * FX).toLocaleString('es-VE', {minimumFractionDigits:2, maximumFractionDigits:2});
 
 /* ── datos de menú ── */
 const DISHES = [
-  {id:'pro1', n:'Combo Parrillero All Grill', d:'Parrilla mixta + Papelón con Limón + Quesillo. ¡Ahorras 20%!', p:14.99, t:'t-parrilla', img:'Images/Parrilla mixta.jpg', eb:'Promo Especial', feat:true, tag:'OFERTA -20%', cat:'promo'},
-  {id:'par', n:'Parrilla mixta',         d:'Res, pollo y chorizo al carbón, con guasacaca y yuca. La estrella de la casa.', p:12.90, t:'t-parrilla', img:'Images/Parrilla mixta.jpg', eb:'A la brasa', feat:true, tag:'Recomendado', cat:'parrilla'},
-  {id:'cos', n:'Costillas BBQ',          d:'Costilla de cerdo a fuego lento, glaseada en salsa de la casa.',                p:11.50, t:'t-costilla', img:'Images/Costillas BBQ.jpg', eb:'A la brasa', tag:'Top', cat:'parrilla'},
-  {id:'pab', n:'Pabellón a la parrilla', d:'Carne mechada al carbón, caraotas, arroz y tajadas.',                          p: 8.50, t:'t-pabellon', eb:'Principal',                               cat:'compartir'},
-  {id:'cac', n:'Cachapa con Cochino',    d:'Maíz tierno dulce, queso de mano y cochino frito.',                            p: 6.80, t:'t-cachapa',  eb:'Principal',                               cat:'compartir'},
-  {id:'are', n:'Arepa Reina Pepiada',    d:'Aguacate cremoso, pollo mechado y mayonesa de casa.',                          p: 4.20, t:'t-are',      eb:'Para compartir',                          cat:'compartir'},
-  {id:'que', n:'Quesillo',               d:'El flan venezolano, con su caramelo profundo.',                                p: 3.40, t:'t-que',      eb:'Dulce',                                   cat:'dulce'},
-  {id:'pap', n:'Papelón con Limón',      d:'Caña de azúcar y limón. Frío, natural.',                                      p: 2.10, t:'t-pap',      eb:'Bebida',                                  cat:'bebida'},
+  // Entradas
+  {id:'teq',  n:'Tequeños',                            d:'Jugoso queso venezolano, en masa ligeramente dulce, acompañados con salsa de la casa.', p:5.99,  t:'t-entrada', img:'Imagenes/Tequeños.jpg', eb:'Entrada', cat:'entradas'},
+  {id:'nug',  n:'Nuggets / Tenders de pollo',           d:'Jugosos bocados de milanesa de pollo 100% naturales y crujientes.', p:4.50, t:'t-entrada', eb:'Entrada', cat:'entradas'},
+  {id:'aro',  n:'Aros de cebolla',                      d:'¡La receta ha vuelto! Aros de cebolla con la receta de Otto, crocantes y bien equilibrados, acompañados con salsa de la casa.', p:6.00, t:'t-entrada', eb:'Entrada', cat:'entradas'},
+  {id:'bun',  n:'Buñuelos de queso con corazón líquido', d:'Delicados buñuelos con un cremoso centro líquido a base de tres quesos, servidos con alioli trufado y coronados con una ligera espuma de ají dulce.', p:5.99, t:'t-entrada', img:'Imagenes/Buñuelos.jpg', eb:'Entrada', cat:'entradas'},
+  {id:'pan',  n:'Papas nubladas',                       d:'Crujientes papas rústicas trufadas, coronadas con espuma de queso parmesano y trufa y mucho queso parmesano.', p:7.50, t:'t-entrada', eb:'Entrada', cat:'entradas'},
+  {id:'cro',  n:'Croquetas',                            d:'Cremosas de jamón serrano hechas a mano, acompañadas con una ligera mayonesa de chimichurri y terminada con caviar de ají dulce.', p:8.50, t:'t-entrada', eb:'Entrada', cat:'entradas'},
+  {id:'car',  n:'Carpaccio clásico con un giro',        d:'Finas láminas de lomito, sazonadas con sal de ceniza y pimienta negra recién molida. Acompañadas de una ligera espuma de pesto, tomates secos confitados, brotes de rúcula, crujientes láminas de ajo frito y queso parmesano.', p:8.90, t:'t-entrada', eb:'Entrada', feat:true, tag:'Recomendado', cat:'entradas'},
+  {id:'pin',  n:'Pinchos de carne',                     d:'Trío de lomito de res, sutilmente aderezado con nuestra salsa de pimentón a la parrilla.', p:4.99, t:'t-entrada', eb:'Entrada', cat:'entradas'},
+  {id:'lum',  n:'Lumpias gourmet 🌶',                    d:'Rellenas de un cremoso paté de morcilla, cebollas caramelizadas y queso manchego. Acompañadas de una confitura de pera y rocoto.', p:11.00, t:'t-entrada', img:'Imagenes/Lumpias.jpg', eb:'Entrada', cat:'entradas'},
+  {id:'bur',  n:'Burrata de Otto',                      d:'Burrata fresca acompañada de higos marinados en miel y aceite de oliva, coronado con aceite de albahaca y nueces.', p:8.50, t:'t-entrada', eb:'Entrada', cat:'entradas'},
+  {id:'pork', n:'Pork belly',                           d:'Pork belly crujiente, con reducción de tamarindo y peperoncino, coronado con un sutil brote de rúcula.', p:7.99, t:'t-entrada', img:'Imagenes/Pork Belly.jpg', eb:'Entrada', cat:'entradas'},
+  {id:'can',  n:'Cannoli steak tartar',                 d:'Cannoli frito relleno de tartar de lomito tierno, finalizado con yema de huevo, cebollín y esencia de sarrapia.', p:9.00, t:'t-entrada', img:'Imagenes/CANNOLI STEAK TARTAR.jpg', eb:'Entrada', feat:true, tag:'Recomendado', cat:'entradas'},
+  // Pasta
+  {id:'pas1', n:'Pasta del día',                        d:'Pregunta por nuestras pastas. Consulta disponibilidad con el staff.', p:12.00, t:'t-pasta', img:'Imagenes/Pasta 1.jpg', eb:'Pasta', feat:true, tag:'Top', cat:'pasta'},
+  {id:'pas2', n:'Pasta del día',                        d:'Pregunta por nuestras pastas. Consulta disponibilidad con el staff.', p:12.00, t:'t-pasta', img:'Imagenes/Pasta 2.jpg', eb:'Pasta', cat:'pasta'},
+  {id:'pas3', n:'Pasta del día',                        d:'Pregunta por nuestras pastas. Consulta disponibilidad con el staff.', p:12.00, t:'t-pasta', img:'Imagenes/Pasta 3.jpg', eb:'Pasta', cat:'pasta'},
+  // Hamburguesas
+  {id:'bh-clasica', n:'Clásica',                        d:'Ribeye de toro venezolano, queso cheddar, tocineta, salsa ranch y salsa smoke, pepino encurtido.', p:11.50, t:'t-burger', eb:'Hamburguesa', cat:'hamburguesas'},
+  {id:'bh-santa',   n:'La santa',                       d:'110 gr ribeye + 110 gr cordero perfecto, lechuga, tomate, cebolla morada, queso cheddar y salsa smoke.', p:14.00, t:'t-burger', eb:'Hamburguesa', cat:'hamburguesas'},
+  {id:'bh-cheese',  n:'Big cheese',                     d:'Ribeye de toro venezolano, mostaza, kétchup, cebolla blanca, pepinillos, queso cheddar.', p:7.99, t:'t-burger', eb:'Hamburguesa', cat:'hamburguesas'},
+  {id:'bh-baga',    n:'Baga',                           d:'Ribeye de toro venezolano, queso cheddar, berro, mermelada de tocino y cebolla, huevo soleado, salsa Baga.', p:14.50, t:'t-burger', img:'Imagenes/Hamburguesa Baga.jpg', eb:'Hamburguesa', feat:true, tag:'Recomendado', cat:'hamburguesas'},
+  {id:'bh-dante',   n:'Dante y Otto 🌶',                 d:'Crema de rocoto, ribeye de toro venezolano, cheddar, pesto de almendras, espuma de parmesano trufada, parmesano flameado y sirope de tamarindo.', p:16.00, t:'t-burger', eb:'Hamburguesa', cat:'hamburguesas'},
+  {id:'bh-escalera',n:'Escalera al cielo',               d:'Ribeye de toro venezolano, queso azul, rúcula, cebolla rosa, tocineta, mayonesa trufada.', p:14.50, t:'t-burger', eb:'Hamburguesa', cat:'hamburguesas'},
+  {id:'bh-texas',   n:'Texas beef 🌶',                   d:'Ribeye de toro venezolano, raclette de brie y tocineta, crema de rocoto, pepino encurtido, cebollas caramelizadas al whisky, salsa smoke.', p:16.00, t:'t-burger', eb:'Hamburguesa', cat:'hamburguesas'},
+  {id:'bh-punto',   n:'Punto y aparte',                  d:'Reducción de manzana verde en vino tinto, crema de champiñones, papitas cabello de ángel.', p:13.50, t:'t-burger', eb:'Hamburguesa', cat:'hamburguesas'},
+  {id:'bh-crispy',  n:'Chicken crispy',                  d:'Jugoso medallón de pollo 100% natural, queso cheddar, tocineta, ensalada coleslaw, salsa smoke, pepino encurtido.', p:12.50, t:'t-burger', eb:'Hamburguesa', cat:'hamburguesas'},
+  {id:'bh-arizona', n:'Arizona',                         d:'200 gr de carne, doble cheddar flameado a la parrilla, cebolla caramelizada al whisky, pepino encurtido con peperoncino, lechuga y salsa smoke.', p:13.50, t:'t-burger', eb:'Hamburguesa', cat:'hamburguesas'},
+  {id:'bh-europa',  n:'Europa',                          d:'(Recreación mejor hamburguesa de Europa 2023). 200 g de carne, queso cheddar, bacon bits, cebolla caramelizada, salsa emmy y pepino encurtido estilo Baga.', p:14.00, t:'t-burger', eb:'Hamburguesa', tag:'Top', cat:'hamburguesas'},
+  // Bebidas
+  {id:'malteada', n:'Malteada Baga',  d:'Leche, Oreo, helado de vainilla y crema chantillí.', p:7.00, t:'t-bebida', eb:'Bebida', feat:true, tag:'Recomendado', cat:'bebidas'},
+  {id:'copas',    n:'Copas',          d:'Copa de la casa.', p:3.99, t:'t-bebida', eb:'Bebida', cat:'bebidas'},
+  {id:'cerv-nac', n:'Cervezas nacionales', d:'Selección de cervezas nacionales bien frías.', p:1.49, t:'t-bebida', eb:'Bebida', cat:'bebidas'},
+  {id:'cerv-imp', n:'Cervezas importadas',  d:'Selección de cervezas importadas.', p:2.99, t:'t-bebida', eb:'Bebida', cat:'bebidas'},
+  // Cócteles
+  {id:'margaritas', n:'Margaritas',     d:'Limón, parchita, fresa.', p:4.49, t:'t-coctel', img:'Imagenes/Coctel 1.jpg', eb:'Cóctel', feat:true, tag:'Recomendado', cat:'cocteles'},
+  {id:'mojito',      n:'Mojito cubano', d:'Limón, parchita.', p:4.49, t:'t-coctel', img:'Imagenes/Coctel 2.jpg', eb:'Cóctel', cat:'cocteles'},
+  {id:'suika',        n:'Suika',        d:'Vodka, esencia de patilla, jarabe de jengibre, zumo de limón.', p:4.49, t:'t-coctel', eb:'Cóctel', cat:'cocteles'},
+  {id:'darkstormy',   n:'Dark & stormy', d:'Ron especiado, jarabe de jengibre, ginger beer, zumo de limón.', p:4.99, t:'t-coctel', eb:'Cóctel', cat:'cocteles'},
+  {id:'ambar',         n:'Ámbar thai',   d:'Ron añejo, ron blanco, triple sec, zumo de limón, amaretto.', p:4.99, t:'t-coctel', eb:'Cóctel', cat:'cocteles'},
+  {id:'paloma',        n:'Paloma criolla', d:'Cocuy agape, punch syrup de toronja, zumo de limón, soda de toronja.', p:4.99, t:'t-coctel', eb:'Cóctel', cat:'cocteles'},
+  {id:'jagerita',      n:'Jagerita',     d:'Trago de la casa.', p:4.99, t:'t-coctel', eb:'Cóctel', cat:'cocteles'},
+  {id:'aperita',       n:'Aperita',      d:'Tequila, triple sec, Aperol, zumo de limón, jarabe de goma.', p:6.00, t:'t-coctel', eb:'Cóctel', cat:'cocteles'},
+  {id:'tropicalgin',   n:'Tropical gin', d:'Gin Hendricks, gasificado de coco, limón y jarabe de goma.', p:6.00, t:'t-coctel', eb:'Cóctel', cat:'cocteles'},
+  // Mocktails
+  {id:'sakura', n:'Sakura', d:'Infusión de jamaica, piña.', p:2.99, t:'t-mocktail', eb:'Mocktail', cat:'mocktails'},
+  {id:'switch', n:'Switch', d:'Agua gasificada, té de mariposa azul, zumo de limón.', p:2.99, t:'t-mocktail', eb:'Mocktail', cat:'mocktails'},
+  {id:'zina',   n:'Zina',   d:'Zumo de naranja y limón, jarabe de jengibre, jarabe especiado con ají, ginger beer.', p:2.99, t:'t-mocktail', eb:'Mocktail', cat:'mocktails'},
 ];
-const EXTRAS = [
-  {n:'Extra guasacaca',     p:0.60},
-  {n:'Yuca al mojo',        p:1.20},
-  {n:'Arepa asada',         p:1.00},
-  {n:'Salsa picante de casa', p:0.40},
-];
+const EXTRAS = [];
 
 let cart = [], sheet = null, menuScrollY = 0;
 
@@ -1978,21 +1962,16 @@ const ZONES = {
     { id: 'naguanagua', name: 'Naguanagua', cost: 2.50 },
     { id: 'san-diego', name: 'San Diego', cost: 3.00 },
   ],
-  caracas: [
-    { id: 'chacao', name: 'Chacao', cost: 2.50 },
-    { id: 'altamira', name: 'Altamira', cost: 2.50 },
-    { id: 'las-mercedes', name: 'Las Mercedes', cost: 3.00 },
-  ],
 }
 
 const PAY_DETAILS = {
-  zelle: [{ label:'Email Zelle', val:'pagos@allgrill.com' }, { label:'Titular', val:'All Grill LLC' }],
+  zelle: [{ label:'Email Zelle', val:'pagos@baga.com' }, { label:'Titular', val:'Baga LLC' }],
   divisas: [],
   pagomovil: [{ label:'Banco', val:'Banesco (0134)' }, { label:'Teléfono', val:'0424-4517727' }, { label:'Cédula/RIF', val:'J-50123456-9' }],
-  transferencia: [{ label:'Banco', val:'Banesco' }, { label:'Cuenta', val:'0134-0123-45-1234567890' }, { label:'Titular', val:'All Grill CA' }],
+  transferencia: [{ label:'Banco', val:'Banesco' }, { label:'Cuenta', val:'0134-0123-45-1234567890' }, { label:'Titular', val:'Baga CA' }],
 }
 
-const STORE_NAMES = { Chacao: 'Sede Valencia Norte', LasMercedes: 'Sede El Viñedo' }
+const STORE_NAMES = { Garibaldi: 'Baga · C.C Paseo Garibaldi' }
 
 let shippingCost = 0;
 
@@ -2181,6 +2160,8 @@ function openSheet(id){
         <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 13l4 4L19 7"/></svg></div>
       </div>
     </div>`).join('');
+  const shOptsWrap = document.getElementById('shOptsWrap');
+  if(shOptsWrap) shOptsWrap.classList.toggle('hidden', EXTRAS.length === 0);
   updateSheetAmt();
   document.getElementById('overlay').classList.add('show');
   document.getElementById('sheet').classList.add('show');
@@ -2200,15 +2181,12 @@ function stepQty(n){ sheet.qty = Math.max(1, sheet.qty+n); document.getElementBy
 const sheetUnit = () => sheet.dish.p + sheet.extras.reduce((a,e) => a+e.p, 0);
 function updateSheetAmt(){ document.getElementById('shAmt').textContent = money(sheetUnit() * sheet.qty); }
 function addFromSheet(){
+  if(appMode === 'dinein'){ closeSheet(); return; }
   const noteVal = document.getElementById('shNote') ? document.getElementById('shNote').value.trim() : '';
   let finalName = sheet.doneness ? `${sheet.dish.n} (${sheet.doneness})` : sheet.dish.n;
   if(noteVal) finalName += ` [Nota: ${noteVal}]`;
   cart.push({...sheet.dish, n: finalName, qty:sheet.qty, extras:[...sheet.extras], unit:sheetUnit()});
   closeSheet();
-
-  appMode = 'delivery';
-  const modeNotice = document.getElementById('modeNotice');
-  if(modeNotice) modeNotice.classList.add('hidden');
 
   renderBag();
   toast('¡Agregado al pedido!');
@@ -2246,10 +2224,12 @@ function enter(mode = 'delivery'){
     document.getElementById('bag').classList.remove('show');
     document.getElementById('bag').style.display = 'none';
     if(modeNotice) modeNotice.classList.remove('hidden');
+    document.body.classList.add('dinein-mode');
   } else {
     document.getElementById('bag').style.display = 'flex';
     renderBag();
     if(modeNotice) modeNotice.classList.add('hidden');
+    document.body.classList.remove('dinein-mode');
   }
 }
 
@@ -2338,7 +2318,7 @@ function fmtCheckoutVal(usd) {
   if (STATE.currency === 'VES') {
     return 'Bs ' + (usd * FX).toLocaleString('es-VE', {minimumFractionDigits:2, maximumFractionDigits:2});
   }
-  return '$' + usd.toFixed(2).replace('.', ',');
+  return '€' + usd.toFixed(2).replace('.', ',');
 }
 function updateTotals() {
   const t = fmtCheckoutVal(totalCalculated());
@@ -2442,7 +2422,7 @@ function onZoneChange() {
   STATE.zone = zid;
   document.getElementById('address-section').classList.remove('dimmed');
   document.getElementById('sum-zone').textContent = z.name;
-  document.getElementById('sum-cost').textContent = '$' + z.cost.toFixed(2);
+  document.getElementById('sum-cost').textContent = '€' + z.cost.toFixed(2);
   shippingCost = z.cost; updateTotals();
 }
 function checkLocalReady() {
@@ -2454,7 +2434,7 @@ function checkLocalReady() {
 
 function selectStore(st) {
   STATE.store = st;
-  ['Chacao','LasMercedes'].forEach(x => {
+  ['Garibaldi'].forEach(x => {
     const el = document.getElementById('store-' + x);
     const r = document.getElementById('radio-store-' + x);
     if(el && r) { el.classList.remove('selected'); r.classList.remove('selected'); r.innerHTML = ''; }
@@ -2681,15 +2661,6 @@ function initVideoCarouselManager() {
 
   items.forEach(item => observer.observe(item));
 }
-
-/* ── promo modal ── */
-function closePromo() {
-  document.getElementById('promoModal').classList.remove('show');
-}
-setTimeout(() => {
-  const pm = document.getElementById('promoModal');
-  if(pm) pm.classList.add('show');
-}, 2500);
 
 /* ── init ── */
 const fxEl = document.getElementById('fx');
